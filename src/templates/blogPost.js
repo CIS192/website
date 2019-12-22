@@ -7,8 +7,6 @@ require("../styles/prism-base16-ateliersulphurpool.light.css")
 const Template = ({data}) => {
   const {markdownRemark} = data
   const html = markdownRemark.html
-  const date = markdownRemark.frontmatter.date
-  const tags = markdownRemark.frontmatter.tags
   
   return (
     <section>
@@ -38,11 +36,6 @@ export const query = graphql`
     markdownRemark(frontmatter: { path: {eq: $pathSlug }}) {
       rawMarkdownBody
       html
-      frontmatter {
-        title
-        date
-        tags
-      }
     }
   }
 `

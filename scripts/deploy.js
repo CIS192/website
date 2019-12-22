@@ -4,7 +4,7 @@ ghpages.publish(
   'public',
   {
     branch: 'master',
-    repo: 'https://github.com/kirubarajan/kirubarajan.github.io.git',
+    repo: 'https://github.com/cis192/cis192.github.io.git',
   },
   () => {
     console.log('Deploy Complete!')

@@ -57,6 +57,8 @@ const Index = () => {
               An optional textbook that the course will sometimes refer to is <a href="http://shop.oreilly.com/product/0636920032519.do">Fluent Python</a>, 
               written by Luciano Ramalho. This is an advanced textbook, and we will only use it sparingly for more intricate concepts.
             </p>
+            <hr />
+            <p>Licensing Information: You are free to use or extend these projects for educational purposes provided that (1) you do not distribute or publish solutions, (2) you retain this notice, and (3) you provide clear attribution to the University of Pennsylvania, including a link to <a href="https://www.cis.upenn.edu/~cis192/">https://www.cis.upenn.edu/~cis192/</a></p>
 	        </div>
 	        <div className="column"></div>
 	      </div>

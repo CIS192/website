@@ -10,7 +10,7 @@ const lectures = [
   {
     week: 1,
     topics: "Data Structures and Algorithms",
-    notes: "/algorithms",
+    notes: "/data_structures",
   },
   {
     week: 2,
@@ -21,7 +21,7 @@ const lectures = [
     week: 3,
     topics: "Modules and Files",
     notes: "/files",
-  },
+  },  
   {
     week: 3,
     topics: "Natural Language Processing with NLTK",
@@ -45,12 +45,12 @@ const lectures = [
   {
     week: 7,
     topics: "Databases with Django",
-    notes: "/flask",
+    notes: "/django1",
   },
   {
     week: 8,
     topics: "User-Based Applications and Security",
-    notes: "/flask",
+    notes: "/django2",
   },
   {
     week: 9,

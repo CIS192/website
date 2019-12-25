@@ -44,12 +44,12 @@ const lectures = [
   },
   {
     week: 7,
-    topics: "Databases with Django",
+    topics: "Full Stack Development with Django",
     notes: "/django1",
   },
   {
     week: 8,
-    topics: "User-Based Applications and Security",
+    topics: "Relational Databases and Security",
     notes: "/django2",
   },
   {

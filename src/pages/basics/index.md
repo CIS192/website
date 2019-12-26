@@ -141,7 +141,7 @@ comment
 code()
 ```
 
-### Variables
+## Variables
 
 Let's actually write some Python code in our newly created `lecture1.py` file. We showed before that we could print `6 + 8`, but what if this was a long formula? It's best to save this into its own variable. Turns out, in Python we can do this very easily:
 
@@ -167,6 +167,22 @@ message = "hello universe"
 ```
 
 without syntactic reprocussion.
+
+### Casting
+
+Casting a variable to another data-type has pretty straightforward syntax. For example, casting an integer to a string is done by calling `str()` on a value:
+
+```python
+thirteen_string = str(6 + 7)
+```
+
+And converting back to an integer is similar as well:
+
+```python
+thirteen = int(thirteen_string)
+```
+
+But since Python is a dynamically typed language, usually you don't have to write many casting statements since we can let the interpreter do the difficult work for us in figuring out which variables are which type.
 
 ## Control Flow
 

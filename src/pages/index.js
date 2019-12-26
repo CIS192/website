@@ -25,7 +25,7 @@ const Index = () => {
             <br />
             <p>
               <strong>Syllabus</strong> <br />
-              After working through the Python fundementals, this course is split into three modules: classical algorithms, web development and machine learning.
+              After working through the Python fundamentals, this course is split into three modules: classical algorithms, web development and machine learning.
               At the end of the course, you will break into groups to build a final project of your choosing! 
               
               <br /> <br />

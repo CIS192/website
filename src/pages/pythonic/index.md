@@ -17,6 +17,8 @@ In this lecture, we'll be tackling a variety of Python constructs that are exclu
 
 ## Iterators
 
+### Comprehensions
+
 ## Generators
 
 ## Decorators

@@ -20,7 +20,7 @@ const Template = ({data}) => {
             </div>
             <hr style={{marginTop: "2.5rem"}}/>
             <div className="level">
-              <p className="is-size-7" style={{marginBottom: "0.5rem"}}>And that's all, folks!</p>
+              <p className="is-size-7" style={{marginBottom: "0.5rem"}}>And that's all, folks! <br /> <br /> These notes were written by Arun Kirubarajan. All rights reserved. </p>
               <a href="/lectures"><span class="tag is-link is-light is-medium">All Lectures</span></a>
             </div>
           </div>

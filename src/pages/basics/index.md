@@ -279,5 +279,3 @@ This is enough Python syntax to get you started, and at the very least will let 
 ### References
 
 1. [python-course.eu](https://www.python-course.eu/python3_history_and_philosophy.php)
-
-These lecture notes were written by Arun Kirubarajan. All rights reserved.

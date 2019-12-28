@@ -425,6 +425,31 @@ The first thing to note here is the use of a `self` identifier. This is equivale
 
 ### Inheritance
 
+Let's say we have a class made to represent animals:
+
+```python
+class Animal:
+    def __init__(self, sound):
+        self.sound = sound
+    
+    def make_sound(self):
+        print(self.sound)
+```
+
+If we want to re-use the functionality from `Animal` in our usage of `Koala` we can **inherit** from the parent class `Animal` by adding the parent class name within parentheses:
+
+```python
+class Koala(Animal):
+    def __init__(self, sound, name):
+        Animal.__init__(self, sound)
+        self.name = name
+    
+    def say_name(self):
+        print("My name is " + self.name)
+```
+
+Notice that we can call `__init__` on the parent class to invoke the constructor, which *overrides* the constructor from the child class definition. We could do the same thing with the `make_sound` function, and a general rule of thumb is that we like to extend function definitions (like we do in the above example) rather than completely redefining them.
+
 ## Conclusion
 
 We've only scratched the surface with the different operations and member functions available to use for each data structure. I highly recommend checking out the [documentation](https://docs.python.org/3/library/collections.html) for collections and the data structures shown today, since a lot of quirky/specific uses are too broad to cover in a single lecture. As we progress in the course, you'll be exposed to different Pythonic syntactic sugar as well as other powerful paradigms for manipulating variables/information efficiently.

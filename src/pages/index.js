@@ -13,7 +13,7 @@ const Index = () => {
 			      <h1 className="subtitle">Spring 2020</h1>
 
             <p><strong>Instructor: </strong> <a>Arun Kirubarajan</a> (Section 201)</p>
-            <p><strong>Location: </strong> Thursdays at 12:00 PM in Towne 303 </p> <br />
+            <p><strong>Location: </strong> Tuesdays at 12:00 PM in Towne 303 </p> <br />
 
 	          <p>
 			      Welcome! Python is a powerful interpreted language with both imperative and functional paradigms. 

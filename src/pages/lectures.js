@@ -69,6 +69,25 @@ const lectures = [
   },
 ]
 
+const references = [
+  {
+    topics: "Unix Commands",
+    notes: "/unix",
+  }, 
+  {
+    topics: "Installing Python",
+    notes: "/install",
+  }, 
+  {
+    topics: "Virtual Environments",
+    notes: "/virtualenv",
+  }, 
+  {
+    topics: "Git Commands",
+    notes: "/git",
+  }, 
+]
+
 const Teaching = () => {
   return (
 	  <section className="section" style={{"paddingTop": "1rem"}}>
@@ -81,6 +100,8 @@ const Teaching = () => {
 	          <p>
               Each lecture has its associated readings listed
               under the link to the lecture material. Schedule is subject to change throughout the semester. 
+              <br /> <br />
+              This class is split into three sections: Pythonic APIs, Data Science, and Web Development.
 	          </p> <br />
 	  
             <table class="table is-bordered is-fullwidth">
@@ -96,6 +117,26 @@ const Teaching = () => {
                   <td> Week {lecture.week}</td>
                   <td> {lecture.topics} </td>
                   <td> <a href={lecture.notes}>Notes</a> </td>
+                </tr>
+              )}
+            </table>
+            
+            <h1 class="title" style={{marginBottom: "0.5rem"}}> References </h1>
+	          <p>
+                A variety of handy guides to quickly get yourself up and running:
+	          </p> <br />
+
+            <table class="table is-bordered is-fullwidth">
+              <thead>
+                <tr>
+                  <th><abbr title="Week">Topics</abbr></th>
+                  <th><abbr title="Slides">Resources</abbr></th>
+                </tr>
+              </thead>
+              {references.map(reference =>
+                <tr>
+                  <td> {reference.topics} </td>
+                  <td> <a href={reference.notes}>Guide</a> </td>
                 </tr>
               )}
             </table>

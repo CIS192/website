@@ -104,7 +104,7 @@ echo print("hello world") >> lecture1.py
 
 which "writes" `print("hello world")` to `lecture1.py`. Now, if we run `cat lecture1.py`, we should be able to **view contents** of the file. 
 
-Last but not lease, we can run `python3 lecture1.py` to see our canonical message displayed to us. These are all very handy Unix commands, which make you a better/faster programmer. However, since it's only the first lecture, feel free to use a text editor such as [Sublime Text](https://www.sublimetext.com/) or [Visual Studio Code](https://code.visualstudio.com/) (recommended) to write all your homework in, running `python3` to execute the file as before.
+Last but not least, we can run `python3 lecture1.py` to see our canonical message displayed to us. These are all very handy Unix commands, which make you a better/faster programmer. However, since it's only the first lecture, feel free to use a text editor such as [Sublime Text](https://www.sublimetext.com/) or [Visual Studio Code](https://code.visualstudio.com/) (recommended) to write all your homework in, running `python3` to execute the file as before.
 
 ## Python Syntax
 Notice in our current `lecture1.py`:
@@ -265,8 +265,9 @@ def add_one(n):
 Notice the lack of a return type. Although running `add_one(4)` will return us 5, it's still possible to have a "void" type that returns "null":
 
 ```python
+# standby, doing nothing
 def do_nothing():
-    # standby, doing nothing
+    pass
 ```
 
 Saving this return value to a variable (e.g. `x = do_nothing()`) will give us a `None` value, which is Python's version of "null". Since Python supports functional paradigms, I'll blow your mind with the notion that functions are actually objects in Python, same as integers, `None`, and custom `Koala` objects. Weird stuff that we will return to.

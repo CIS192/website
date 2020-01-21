@@ -15,6 +15,7 @@ const Template = ({data}) => {
           <div className="column" />
           <div className="column is-half" style={{padding: "2rem"}}>
             <br />
+            <a href="/"><span class="tag is-link is-light is-small">CIS 192: Python Programming</span></a>
             <div className="generated">
               <div style={{marginTop: "1rem"}} dangerouslySetInnerHTML={{__html: html}}/>
             </div>

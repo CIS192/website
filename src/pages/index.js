@@ -12,7 +12,7 @@ const Index = () => {
 	          <h1 className="title">CIS 192: Python Programming 🐍</h1>
 			      <h1 className="subtitle">Spring 2020</h1>
 
-            <p><strong>Instructor: </strong> <a>Arun Kirubarajan</a> (Section 201)</p>
+            <p><strong>Instructor: </strong> <a href="https://kirubarajan.github.io">Arun Kirubarajan</a> (Section 201)</p>
             <p><strong>Location: </strong> Tuesdays at 12:00 PM in Towne 303 </p> <br />
 
 	          <p>

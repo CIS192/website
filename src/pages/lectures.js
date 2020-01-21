@@ -69,7 +69,7 @@ const lectures = [
   },
 ]
 
-const references = [
+const guides = [
   {
     topics: "Unix Commands",
     notes: "/unix",
@@ -101,7 +101,7 @@ const Teaching = () => {
               Each lecture has its associated readings listed
               under the link to the lecture material. Schedule is subject to change throughout the semester. 
               <br /> <br />
-              This class is split into three sections: Pythonic APIs, Data Science, and Web Development.
+              This class is split into three sections: Pythonic Foundations, Data Science, and Web Development.
 	          </p> <br />
 	  
             <table class="table is-bordered is-fullwidth">
@@ -121,7 +121,7 @@ const Teaching = () => {
               )}
             </table>
             
-            <h1 class="title" style={{marginBottom: "0.5rem"}}> References </h1>
+            <h1 class="title" style={{marginBottom: "0.5rem"}}> Guides </h1>
 	          <p>
                 A variety of handy guides to quickly get yourself up and running:
 	          </p> <br />
@@ -133,10 +133,10 @@ const Teaching = () => {
                   <th><abbr title="Slides">Resources</abbr></th>
                 </tr>
               </thead>
-              {references.map(reference =>
+              {guides.map(guide =>
                 <tr>
-                  <td> {reference.topics} </td>
-                  <td> <a href={reference.notes}>Guide</a> </td>
+                  <td> {guide.topics} </td>
+                  <td> <a href={guide.notes}>Guide</a> </td>
                 </tr>
               )}
             </table>

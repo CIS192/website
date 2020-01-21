@@ -14,12 +14,12 @@ const Teaching = () => {
               Each assignment is designed to take roughly 4 to 5 hours to complete. Start early, 
               ask questions on Piazza and come to office hours! Note there is NO collaboration unless otherwise noted. 
 	          </p> <br />
-            <p><strong>Python Foundations</strong></p>
+            <p><strong>Pythonic Foundations</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
 	            <a class="panel-block list-group-item is-primary">Assignment 1: Finger Workouts</a>
 	            <a class="panel-block list-group-item is-primary">Assignment 2: Data Structures and Algorithms</a>
 	          </div>
-	          <p><strong>Machine Learning</strong></p>
+	          <p><strong>Data Science</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
 	            <a class="panel-block list-group-item is-primary">Assignment 3: Learning Machine Learning</a>
 	            <a class="panel-block list-group-item is-primary">Assignment 4: Hyperparameter Search</a>

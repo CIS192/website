@@ -16,8 +16,8 @@ const Teaching = () => {
 	          </p> <br />
             <p><strong>Pythonic Foundations</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-	            <a class="panel-block list-group-item is-primary">Assignment 1: Finger Workouts</a>
-	            <a class="panel-block list-group-item is-primary">Assignment 2: Data Structures and Algorithms</a>
+	            <a class="panel-block list-group-item is-primary" href="https://github.com/CIS192/homework/blob/master/assignment1.py" download>Assignment 1: Finger Workouts</a>
+	            <a class="panel-block list-group-item is-primary" href="https://github.com/CIS192/homework/blob/master/assignment2.py">Assignment 2: Data Structures and Algorithms</a>
 	          </div>
 	          <p><strong>Data Science</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>

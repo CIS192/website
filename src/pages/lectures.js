@@ -79,13 +79,13 @@ const guides = [
     notes: "/install",
   }, 
   {
-    topics: "Virtual Environments",
-    notes: "/virtualenv",
-  }, 
-  {
-    topics: "Git Commands",
+    topics: "Git Reference",
     notes: "/git",
   }, 
+  {
+    topics: "Virtual Environments",
+    notes: "/virtualenv",
+  }
 ]
 
 const Teaching = () => {

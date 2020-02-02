@@ -48,7 +48,7 @@ const Index = () => {
               <strong>Grading</strong> <br />
               Six programming assignments count for 60% of the final grade. The final project counts for 30% and 
               attendance/participation makes up the remaining 10%. There will be ample opportunity for extra credit 
-              throughout the course!
+              throughout the course! Everybody gets five late days, and up to two can be used for a single assignment.
             </p>
 
             <br />

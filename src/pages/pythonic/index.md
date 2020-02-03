@@ -2,10 +2,10 @@
 path: "/pythonic"
 ---
 
-# Pythonic Programming (In Progress)
+# Pythonic Programming
 > The "Python" Way of Doing Things 
 
-In this lecture, we'll be tackling a variety of Python constructs that are exclusive to the language. A variety of the examples shown today might feel a little contrived, but we'll see later in the course that each and every module shown in this lecture will either be strictly necessary for certain functionality or just incredibly syntactic sugar.
+In this lecture, we'll be tackling a variety of Python constructs that are exclusive to the language. A variety of the examples shown today might feel a little contrived, but we'll see later in the course that each and every module shown in this lecture will either be strictly necessary for certain functionality or is just incredibly awesome syntactic sugar.
 
 ## Objects
 Let's start off with some core object-oriented concepts. Let's say we have a simple class definition as follows:
@@ -169,11 +169,51 @@ def print_attributes(kind, **kwargs):
 Isn't that also convenient?
 
 ## Comprehensions
-Let's motivate the next few concepts by displaying more Python elegance through the `for` construct. In particular, let's think about how we can square a list of numbers. Consider attempt 1:
+Let's motivate the next few concepts by displaying more Python elegance through the `for` construct. In particular, let's think about how we can square a list of numbers. Consider the naive approach:
 
 ```python
-li = [1, 2, 3, 4, 5]
+old_list = [1, 2, 3, 4, 5]
+new_list = list()
+
+for number in old_list:
+    new_list.append(number ** 2)
 ```
+
+This looks like it should work fine, and it does! However, this idea of looping over a list to create a new list is a common paradigm in Python programming. As such, the language supports some of my favourite syntactic sugar: *list comprehensions*.
+
+Let's re-write this code using a list comprehension:
+
+```python
+old_list = [1, 2, 3, 4, 5]
+new_list = [x ** 2 for x in old_list]
+```
+
+And we're done! Wasn't that simple? The general formula for a *list comprehension* is 
+
+```
+(expression) for (value) in (list) (if condition)
+```
+
+We can selectively choose values using an `if` clause at the end of the comprehension: 
+
+```python
+numbers = [1, 2, 3, 4, 5, 6, 7]
+even_numbers = [x for x in numbers if x % 2 == 0]
+```
+
+Comprehensions can also be applied to sets and dictionaries:
+
+```python
+names = ["ARun", "saIF", "KeVin"]
+
+# dictionary comprehension for lengths 
+name_lengths = {name: len(name) for name in names}
+
+# set comprehension for string formatting
+formatted_names = {name[0].upper() + name[1:].lower() for name in names} 
+```
+
+As a general hint, whenever we want you to implement functions in a single line, we're usually wanting you to think about some kind of comprehension.
 
 ## Iterators
 So how do for loops and list comprehensions work so seemlessly? And what kinds of objects can we iterate over? Turns out, whatever implements the magic methods of `__next__` and `__iter__`. So something that looks like this:
@@ -239,8 +279,75 @@ for number in generator:
 I hope this resolves some behind the scenes intuition on for-loops!
 
 ## Lambda Functions
+Python is an object-oriented language at its core, and that means that functions are also first-class citizens in the language. We can see this if we define a custom function `def foo(): pass` and then call `print(foo)` without brackets to start the function call.
+
+Recall the notion of anonymous functions from CIS 120. We have a similar notion in Python named *lambda functions*, which unlocks functional programming paradigms in Python by letting us use *functions as arguments*. 
+
+Lambda functions look like this:
+
+```python
+lambda x: x + 1
+```
+
+This is a function that, as you can imagine, adds by 1. Note that lambda functions by default return the expression that is defined. This is expected behaviour in functional programming. We can apply this function directly or by giving it a name. The following function calls are equivalent
+
+```python
+y = (lambda x: x + 1)(4)
+
+add_one = lambda x: x + 1
+y = add_one(4)
+```
+
+Let's consider sorting a list of strings by their length. In a language like Java, we would have to define a custom sorting function, or mutate the original list to include auxillary data. However, in Python, we can provide a lambda function to the `sorted` function:
+
+```python
+names = ["Arun", "Saif", "Kevin"]
+sorted_names = sorted(names, key=lambda x: len(x))
+```
+
+Let's disect this. The `key` parameter tells the `sorted` function what value to sort off of. So, when we pass a lambda function that returns the length of the values, we get exactly what we want for the algorithm to sort based off length. 
+
+We can also implement some classical functional programming ideas on lists such as `map` (which is sort of like a comprehension) and `filter` (which filters elements according to some function):
+
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+squares = map(lambda x: x ** 2, numbers)
+events = filter(lambda x: x % 2 == 0, numbers)
+```
+
+Lambda functions give us powerful programming capabilities.
 
 ## Decorators
+
+Decorators are a complex topic in Python, so we'll try to introduce the elegance of the topic without too many headaches.
+
+Following from the previous section, we can see that passing functions as parameters is a powerful construct. Decorators extend this by letting us define "function wrappers". Consider the following code:
+
+```python
+def do_something():
+    print("doing something")
+
+def check(function):
+    if True:
+        print("check complete!")
+        return function()
+    else:
+        raise Exception()
+
+wrapped = check(do_something)
+```
+
+Here, we've defined a function that executes some code that checks some conditions before a given function is executed, and returns the function to be executed. This construct is pretty standard when for example, we wanted to check if a user has the necessary permissions to perform some action. Notice we get a function returned back, with all the conditions met.
+
+In Python, we have shorthand syntax to perform this by *decorating* the function:
+
+```python
+@check
+def do_something():
+    print("doing something")
+```
+
+It's easy to see how powerful decorators are when we see them in action. We're gonna leave it at here for now, and we'll return to decorators when we use the Flask web development framework, where their use will be more apparent.
 
 ---
 

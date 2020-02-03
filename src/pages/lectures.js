@@ -19,8 +19,8 @@ const lectures = [
   },
   {
     week: 3,
-    topics: "Modules and Files",
-    notes: "/files",
+    topics: "Exceptions, Modules and Files",
+    notes: "/modules",
   },  
   {
     week: 3,

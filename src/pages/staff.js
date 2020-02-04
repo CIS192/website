@@ -7,7 +7,7 @@ const staff_list = [
 		name: "Arun Kirubarajan",
     role: "Instructor",
     bio: "Arun is a junior from Mississauga, Canada studying CIS and Cognitive Science. He likes skateboarding, making coffee, and making bad jokes.",
-    hours: "Tuesdays, 1:30 to 3:00 PM @ Weiss Tech House"
+    hours: "Tuesdays, 1:30 to 2:30 PM @ Weiss Tech House"
   },
   {
     image: "https://i.imgur.com/mP7wT9v.jpg",

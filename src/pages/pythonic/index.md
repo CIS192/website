@@ -262,7 +262,25 @@ for i in range(10):
 ## Generators
 Let's talk about some more function behaviour. We're used to functions that return a single value, and terminate their execution upon returning. In Python, we can extend this idea of returning a value to *generators*. Generators are functions that `yield` a value, and do not terminate upon doing so. As a result, we can delare functions that act as iterators.
 
-We can implement `CountByOne` from before as a generator:
+```python
+def simple_yields():
+    yield 1
+    print("only see this when yielding 2!")
+    yield 2
+    print("only see this when yielding 3!")
+    yield 3
+    print("only see this when yielding 4!")
+    yield 4
+
+generator = simple_yields()
+print(next(generator))
+print(next(generator))
+print(next(generator))
+```
+
+Notice this is the same thing as the iterator, but we don't need to define an iterator class, or even a `next` function!
+
+Let's now see how we can perform computation and yield results sequentially. We can implement `CountByOne` from before as a generator:
 
 ```python
 def count(start=0, end=10):
@@ -274,6 +292,16 @@ def count(start=0, end=10):
 generator = count(end=20) # defines generator object
 for number in generator:
     print(number)
+```
+
+Note that when calling `count(end=20)`, we are returned the generator itself and we can then iterate over the outputs. Between `yield` statements, the execution of the function is essentially stopped until the caller makes another call.
+
+We can even define generators in terms of other iterators:
+
+```python
+def square_generator(n):
+    for i in range(n):
+        yield i ** 2
 ```
 
 I hope this resolves some behind the scenes intuition on for-loops!

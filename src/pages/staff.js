@@ -13,8 +13,8 @@ const staff_list = [
     image: "https://i.imgur.com/mP7wT9v.jpg",
     name: "Amit Lohe",
     role: "Teaching Assistant",
-    bio: "Amit a junior studying CIS and *Wharton* from Lexington, KY. He enjoys cooking, reading, and playing squash. He likes to eat Indian food.",
-    hours: "Wednesdays, 3:00 to 5:00 @ Levine 5th Floor"
+    bio: "Amit is a junior studying CIS and Business Analytics from Lexington, KY. He enjoys cooking, reading, and playing squash.",
+    hours: "Wednesdays, 10:45 to 12:45 @ Levine 5th Floor"
   },
   {
     image: "https://i.imgur.com/CvYs5et.jpg",

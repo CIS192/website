@@ -20,3 +20,10 @@ Run `git clone https://github.com/CIS192/homework` to download all the homework 
 
 ## Creating Repositories
 Coming soon!
+
+## Additional Resources
+Below are a list of helpful resources in case you have any Git-related questions:
+
+1. Interactive tutorial: https://learngitbranching.js.org/
+2. A Git commands cheat sheet: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
+3. Messed something up? Check out: https://ohshitgit.com/

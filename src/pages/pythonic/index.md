@@ -79,6 +79,13 @@ sloth3.make_sound()
 
 There are dozens of magic methods, which makes sense since magic methods typically implement some core piece of Python functionality with respect to objects. Explore the magic methods and see where that takes you!
 
+### Extras: Class Methods and Static Methods
+So far, we've talked about methods which relate to a specific instance. These are known as instance methods (suprise, suprise). However, there are entirely different families of functions which are defined within classes. Thinking about these can get a little abstract and paritcular, so I've decided to summarize them for you here in case you ever need to implement one of these functions. The explanation for "decorating" a function is a little out of order and is at the end of these notes, so return here after reading it!
+
+The first interesting family of methods are Static methods, which you may be familiar with from other languages such as Java, allow us to define functionality for a specific class that does not depend on any specific instance. To do this, we decorate a function with `@staticmethod` and we can subsequently call the method using something like `CustomClass.static_method()`. Note that this is entirely different from first instantiating `obj = CustomClass()` and then calling `obj.static_method()`.
+
+Next, let's talk about Class Methods, which are functions which are decorated with `@classmethod`. They don't pertain to a specific instance, but instead maintain state across all instances of the class. For example, a `count()` class method can be defined to return the amount of objects that are instantiated for a given class.
+
 ### Copying
 Sometimes, trying to work with objects and their locations in memory can get confusing. So, Python lets you explicitly deal with these situations using the `copy` module. The two relevant modules can be imported by calling `from copy import copy, deepcopy`.
 

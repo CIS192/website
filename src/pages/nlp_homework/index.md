@@ -20,7 +20,7 @@ For the first part of the homework you will be implementing a couple of basic NL
 
 The second part of the homework will be a longer project: building a text classifier. Now that we have seen tokenizing, text cleaning, and word importance with TF-IDF, let's train a text classifier that will be able to classify a word as being simple (e.g. *easy*, *act*, *blue*) or complex (e.g. *ostentatious*, *esoteric*, *aberration*). This is an important step in a larger NLP task to simply texts to make text more readable. 
 
-In the provided code template with proveded helper and unimplemented functions, you will need to:
+In the provided code template with provided helper and unimplemented functions, you will need to:
 0. Look at the dataset! Try to understand the information that is conveyed to better understand the task.
 1. Implement the machine learning evaluation metric we discussed in class (accuracy).
 2. Perform data pre-processing for our dataset. You will need to parse the provided pre-labeled data in training/test sets, and implement a simple baseline model.

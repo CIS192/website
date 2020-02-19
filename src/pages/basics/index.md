@@ -72,7 +72,7 @@ Now if we type some Python into this "chatbot", we can expect a *perfect* Python
 hello world
 ```
 
-I call this a chatbot, because when we want to debug certain behaviour of Python's language, we turn to this **interpreter** to give us insight into the language. In previous courses at Penn, we ran languages like Java from an IDE. However, in this course we will get very familiar with the command line by exclusively using it!
+I call this a chatbot, because when we want to debug certain behaviour of Python's language, we turn to this **[interpreter](https://docs.python.org/3.7/tutorial/interpreter.html)** to give us insight into the language. In previous courses at Penn, we ran languages like Java from an IDE. However, in this course we will get very familiar with the command line by exclusively using it!
 
 We can actually run any Python code from the interpreter, like simple arithmetic:
 
@@ -190,7 +190,7 @@ We could write a long sequence of variable assignments and printing, but sometim
 
 ### If Statements
 
-Let's look at the most simple form of control flow: the classic if-statement. In Python this is very straight forward:
+Let's look at the most simple form of control flow: the classic [if-statement](https://docs.python.org/3.7/tutorial/controlflow.html#if-statements). In Python this is very straight forward:
 
 ```python
 x = 4
@@ -218,7 +218,7 @@ else: print("i guess x is exactly 4")
 Sometimes, doing this code compression is easier to read, and helps the reader see symmetry in the logic. However, this is usually a bad idea since it can make the code feel cluttered.
 
 ### While Loop
-A while loop is similar to an if statement, with its use of a condition that controls the flow of code. For example:
+A [while loop](https://docs.python.org/3.7/reference/compound_stmts.html#while) is similar to an if statement, with its use of a condition that controls the flow of code. For example:
 
 ```python
 counter = 0
@@ -230,7 +230,7 @@ while counter < 10:
 
 This will have the program print `"counter is less than 10"` ten times. Again, notice the simple definition of the condition, the `:` token, and the indentation. Again, indentation is VERY important in Python!
 
-Like with other languages, we can get even more specific with the loop behaviour with the `continue` and `break` constructs. The `continue` token will cause the program to restart the loop when encountered, whereas the `break` token will completely exit the entire loop. These can be useful if, for example, we wanted to emulate a do-while loop in Python (which isn't natively supported):
+Like with other languages, we can get even more specific with the loop behaviour with the [`continue`](https://docs.python.org/3.7/reference/simple_stmts.html#the-continue-statement) and [`break`](https://docs.python.org/3.7/reference/simple_stmts.html#the-break-statement) constructs. The `continue` token will cause the program to restart the loop when encountered, whereas the `break` token will completely exit the entire loop. These can be useful if, for example, we wanted to emulate a do-while loop in Python (which isn't natively supported):
 
 ```python
 while True:
@@ -240,20 +240,20 @@ while True:
 ```
 
 ### For Loop
-If you noticed, the previous bit of code involved us essentially executing a for loop, a special case of a while loop where we have an explicit update step and condition. An identical implementation of the previous counter would look like:
+If you noticed, the previous bit of code involved us essentially executing a [for loop](https://docs.python.org/3.7/tutorial/controlflow.html#for-statements), a special case of a while loop where we have an explicit update step and condition. An identical implementation of the previous counter would look like:
 
 ```python
 for counter in range(10):
     print("counter is less than 10)
 ```
 
-What does the `range()` function do? It returns a `range` object, which is an iterable. We'll expand on what this means later, but for now it just gives us an object that contains the integers between 0 and 9 that we can iterate over. Although there is no explicit condition in the for loop, we can see that the loop terminates when there are no more elements left in the `range` object to iterate over. 
+What does the [`range()`](https://docs.python.org/3.7/tutorial/controlflow.html#the-range-function) function do? It returns a `range` object, which is an iterable. We'll expand on what this means later, but for now it just gives us an object that contains the integers between 0 and 9 that we can iterate over. Although there is no explicit condition in the for loop, we can see that the loop terminates when there are no more elements left in the `range` object to iterate over. 
 
 There is a lot of nuance that we can gain from the for loop, and we will expand upon this in later sections.
 
 ### Functions
 
-The final piece of control flow is functions. As with for loops, there is a TON of nuance in implementing functions in Python, so for now, we'll stick with the basics. 
+The final piece of control flow is [functions](https://docs.python.org/3.7/tutorial/controlflow.html#defining-functions). As with for loops, there is a TON of nuance in implementing functions in Python, so for now, we'll stick with the basics. 
 
 Defining a function is done using the `def` keyword:
 

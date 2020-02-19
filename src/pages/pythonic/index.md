@@ -50,7 +50,7 @@ koala.sleep()
 But what does `.__init__()` actually do?
 
 ### Magic Methods
-We know `init` as something like a constructor. But it turns out, there are a varitey of other core object functionalities that can be implemented (or overrided). For example, you've seen getting the length of a list using `len()` is actually implemented on the list object using `__len__()`. There are actually a variety of ther magic methods that can be used:
+We know [`__init__()`](https://docs.python.org/3.7/reference/datamodel.html#object.__init__) as something like a constructor. But it turns out, there are a varitey of other core object functionalities that can be implemented (or overrided). For example, you've seen getting the length of a list using `len()` is actually implemented on the list object using [`__len__()`](https://docs.python.org/3.7/reference/datamodel.html#object.__len__). There are actually a variety of ther magic methods that can be used:
 
 ```python
 class Sloth(Animal):
@@ -82,12 +82,12 @@ There are dozens of magic methods, which makes sense since magic methods typical
 ### Extras: Class Methods and Static Methods
 So far, we've talked about methods which relate to a specific instance. These are known as instance methods (suprise, suprise). However, there are entirely different families of functions which are defined within classes. Thinking about these can get a little abstract and paritcular, so I've decided to summarize them for you here in case you ever need to implement one of these functions. The explanation for "decorating" a function is a little out of order and is at the end of these notes, so return here after reading it!
 
-The first interesting family of methods are Static methods, which you may be familiar with from other languages such as Java, allow us to define functionality for a specific class that does not depend on any specific instance. To do this, we decorate a function with `@staticmethod` and we can subsequently call the method using something like `CustomClass.static_method()`. Note that this is entirely different from first instantiating `obj = CustomClass()` and then calling `obj.static_method()`.
+The first interesting family of methods are Static methods, which you may be familiar with from other languages such as Java, allow us to define functionality for a specific class that does not depend on any specific instance. To do this, we decorate a function with [`@staticmethod`](https://docs.python.org/3.7/library/functions.html#staticmethod) and we can subsequently call the method using something like `CustomClass.static_method()`. Note that this is entirely different from first instantiating `obj = CustomClass()` and then calling `obj.static_method()`.
 
-Next, let's talk about Class Methods, which are functions which are decorated with `@classmethod`. They don't pertain to a specific instance, but instead maintain state across all instances of the class. For example, a `count()` class method can be defined to return the amount of objects that are instantiated for a given class.
+Next, let's talk about Class Methods, which are functions which are decorated with [`@classmethod`](https://docs.python.org/3.7/library/functions.html#classmethod). They don't pertain to a specific instance, but instead maintain state across all instances of the class. For example, a `count()` class method can be defined to return the amount of objects that are instantiated for a given class.
 
 ### Copying
-Sometimes, trying to work with objects and their locations in memory can get confusing. So, Python lets you explicitly deal with these situations using the `copy` module. The two relevant modules can be imported by calling `from copy import copy, deepcopy`.
+Sometimes, trying to work with objects and their locations in memory can get confusing. So, Python lets you explicitly deal with these situations using the [`copy`](https://docs.python.org/3.7/library/copy.html#module-copy) module. The two relevant modules can be imported by calling `from copy import copy, deepcopy`.
 
 The two relevant packages here are `copy` and `deepcopy`. Copy lets you copy the contents of an object into another object:
 
@@ -143,11 +143,11 @@ def add(*args):
     return total
 ```
 
-Isn't that convenient?
+Isn't that convenient? For more on positional arguments, see [here](https://docs.python.org/3.7/tutorial/controlflow.html#arbitrary-argument-lists) and [here](https://docs.python.org/3/glossary.html#term-argument).
 
 ### Keyword Arguments and Kwargs
 
-In Python, we can also extend argument definitions with *keyword arguments*. Consider the following subtract function:
+In Python, we can also extend argument definitions with [*keyword arguments*](https://docs.python.org/3.7/tutorial/controlflow.html#keyword-arguments). Consider the following subtract function:
 
 ```python
 def subtract(x, y):
@@ -186,7 +186,7 @@ for number in old_list:
     new_list.append(number ** 2)
 ```
 
-This looks like it should work fine, and it does! However, this idea of looping over a list to create a new list is a common paradigm in Python programming. As such, the language supports some of my favourite syntactic sugar: *list comprehensions*.
+This looks like it should work fine, and it does! However, this idea of looping over a list to create a new list is a common paradigm in Python programming. As such, the language supports some of my favourite syntactic sugar: [*list comprehensions*](https://docs.python.org/3.7/tutorial/datastructures.html#list-comprehensions).
 
 Let's re-write this code using a list comprehension:
 
@@ -267,7 +267,7 @@ for i in range(10):
 ```
 
 ## Generators
-Let's talk about some more function behaviour. We're used to functions that return a single value, and terminate their execution upon returning. In Python, we can extend this idea of returning a value to *generators*. Generators are functions that `yield` a value, and do not terminate upon doing so. As a result, we can delare functions that act as iterators.
+Let's talk about some more function behaviour. We're used to functions that return a single value, and terminate their execution upon returning. In Python, we can extend this idea of returning a value to [*generators*](https://docs.python.org/3.7/tutorial/classes.html#generators). Generators are functions that `yield` a value, and do not terminate upon doing so. As a result, we can delare functions that act as iterators.
 
 ```python
 def simple_yields():
@@ -316,7 +316,7 @@ I hope this resolves some behind the scenes intuition on for-loops!
 ## Lambda Functions
 Python is an object-oriented language at its core, and that means that functions are also first-class citizens in the language. We can see this if we define a custom function `def foo(): pass` and then call `print(foo)` without brackets to start the function call.
 
-Recall the notion of anonymous functions from CIS 120. We have a similar notion in Python named *lambda functions*, which unlocks functional programming paradigms in Python by letting us use *functions as arguments*. 
+Recall the notion of anonymous functions from CIS 120. We have a similar notion in Python named [*lambda functions*](https://docs.python.org/3.7/tutorial/controlflow.html#lambda-expressions), which unlocks functional programming paradigms in Python by letting us use *functions as arguments*. 
 
 Lambda functions look like this:
 
@@ -354,7 +354,7 @@ Lambda functions give us powerful programming capabilities.
 
 ## Decorators
 
-Decorators are a complex topic in Python, so we'll try to introduce the elegance of the topic without too many headaches.
+[Decorators](https://docs.python.org/3.7/glossary.html#term-decorator) are a complex topic in Python, so we'll try to introduce the elegance of the topic without too many headaches.
 
 Following from the previous section, we can see that passing functions as parameters is a powerful construct. Decorators extend this by letting us define "function wrappers". Consider the following code:
 

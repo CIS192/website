@@ -11,7 +11,7 @@ Disclaimer: we don't really care about asymptotic complexity much in this class.
 
 ## Sets
 
-Let's take it to the basics. We want to store just *some collection* of things. That is, we want to maintain an *unordered* bag of objects. In math and computer science, this construct is known as a **set**. Similarly, in Python this is called a `set` (suprise, suprise).
+Let's take it to the basics. We want to store just *some collection* of things. That is, we want to maintain an *unordered* bag of objects. In math and computer science, this construct is known as a **set**. Similarly, in Python this is called a [`set`](https://docs.python.org/3.7/tutorial/datastructures.html#sets) (suprise, suprise).
 
 ### Instantiation
 
@@ -38,7 +38,7 @@ students.remove("Arun")
 
 ### Existence
 
-Checking if an element exists is one of my favourite pieces of syntactic sugar from Python - we simply write the boolean expression pretty much in English using the `in` keyword:
+Checking if an element exists is one of my favourite pieces of syntactic sugar from Python - we simply write the boolean expression pretty much in English using the [`in`](https://docs.python.org/3/reference/expressions.html#in) keyword:
 
 ```python
 if "Arun" in students:
@@ -80,9 +80,9 @@ The shorthand for this is `set1 & set2`, which makes sense if you think of inter
 
 ## Tuples
 
-How do we get a specific element from a set? Turns out, we can't. This is a limitation in the *API* of sets; they're mainly used as a means of checking existence of certain objects. Let's move onto data structures that we can index into, thus preserving some notion of *order*. Recall a tuple from CIS 120 as being an **immutable** sequence of elements. 
+How do we get a specific element from a set? Turns out, we can't. This is a limitation in the *API* of sets; they're mainly used as a means of checking existence of certain objects. Let's move onto data structures that we can index into, thus preserving some notion of *order*. Recall a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) from CIS 120 as being an **immutable** sequence of elements. 
 
-## Instantiation
+### Instantiation
 
 In Python, we can declare a tuple by using regular brackets:
 
@@ -136,7 +136,7 @@ x, y = y, x
 # clean up after blown mind
 ```
 
-## Insertion/Removal
+### Insertion/Removal
 
 Tuples are designed to be **immutable**, so we actually can't change the contents of a tuple once it's been instantiated. That is, if we tried to set `student[1] = 99`, the code would crash. A little "gotcha" with tuples is that although the tuple itself cannot change, the values within the tuple are subject to mutation. This is because if we held a tuple of objects (which is no more than storing the *memory locations* of the objects), and the objects were to change, the tuple would still hold reference to the mutated objects.
 
@@ -161,7 +161,7 @@ three_ones = (1) * 3
 
 ## Lists
 
-What if we wanted the indexing power of a tuple, but in the form of a *mutable* data structure, one that allows us to change the contents inside. Suprise suprise - we've arrived back at the array! In Python, these are lovingly known as **lists**. Lists are completely mutable objects that can contain *any* arbitrary datatype. This means that we can have a list containing strings, integers, and custom Koala objects,
+What if we wanted the indexing power of a tuple, but in the form of a *mutable* data structure, one that allows us to change the contents inside. Suprise suprise - we've arrived back at the array! In Python, these are lovingly known as **lists**. [Lists](https://docs.python.org/3.7/tutorial/introduction.html#lists) are completely mutable objects that can contain *any* arbitrary datatype. This means that we can have a list containing strings, integers, and custom Koala objects,
 
 ### Instantiation
 
@@ -186,7 +186,7 @@ print(students[-1]) # -> prints Bob
 
 ### Insertion/Removal
 
-We can append values to a list using `.append()`, which is an $O(1)$ operation in expectation:
+We can append values to a list using [`.append()`](https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists), which is an $O(1)$ operation in expectation:
 
 ```python
 students.append("Imposter Arun")
@@ -229,7 +229,7 @@ for row in pixels:
 ```
 
 ### Sorting
-We can sort lists in a variety of ways. The first is to call `sorted()` on the list. This creates a **copy** of the original list:
+We can sort lists in a variety of ways. The first is to call [`sorted()`](https://docs.python.org/3.7/library/functions.html#sorted) on the list. This creates a **copy** of the original list:
 
 ```python
 numbers = [1, 5, 4, 12, 3, 0]
@@ -273,7 +273,7 @@ We've thrown a couple of obscure concepts here: functions as objects and `lambda
 
 ## Strings
 
-We will re-introduce strings in the context of being a data structure. In particular, there are a variety of operations we can perform on them.
+We will re-introduce strings in the context of being a data structure. In particular, there are a variety of [operations](https://docs.python.org/3.7/library/stdtypes.html#string-methods) we can perform on them.
 
 Recall that a string can be instantiated by defining the characters within quotations:
 
@@ -334,7 +334,7 @@ How convenient!
 
 ## Dictionaries
 
-One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. In Python, these data structures are known as **dictionaries**. Furthermore, they're *even easier* to instantiate and use in Python. Dictionaries are **mutable** data structures that can take an arbitrary object as a key, and provide an arbitrary object as a value.
+One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. In Python, these data structures are known as [**dictionaries**](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries). Furthermore, they're *even easier* to instantiate and use in Python. Dictionaries are **mutable** data structures that can take an arbitrary object as a key, and provide an arbitrary object as a value.
 
 ### Instantiation 
 
@@ -372,7 +372,7 @@ else:
     scores["Imposter Arun"] = scores["Imposter Arun"] + 1 
 ```
 
-But sometimes, this isn't very compact. We can instantiate a dictionary with an initialized value by using the `defaultdict` package. We haven't covered imports yet, but this package is a module that comes bundled with Python (known as a *first-party* package) and includes a variety of useful features that we don't need to implement again.
+But sometimes, this isn't very compact. We can instantiate a dictionary with an initialized value by using the [`defaultdict`](https://docs.python.org/3.7/library/collections.html#defaultdict-objects) package. We haven't covered imports yet, but this package is a module that comes bundled with Python (known as a *first-party* package) and includes a variety of useful features that we don't need to implement again.
 
 At the top of our code we can add `from collections import defaultdict`, and we can now have a dictionary that has all of its values initialized to 0. 
 
@@ -393,7 +393,7 @@ default_names = defaultdict(str)
 
 ## Objects
 
-Python is an object-oriented programming language, through and through. This means that all values such as integers, strings, and dictionaries are all considered objects to the Python interpreter. Defin
+Python is an object-oriented programming language, through and through. This means that all values such as integers, strings, and dictionaries are all considered objects to the Python interpreter. Here, we'll be taking a look at how to define and work with [objects](https://docs.python.org/3.7/tutorial/classes.html#a-first-look-at-classes).
 
 ### Definition
 
@@ -412,7 +412,7 @@ koala.name = "Bert"
 koala.age = 2
 ```
 
-Note that we didn't define Koala to have any public/private variables or anything like that. Instead, all member variables can be defined at runtime and by default every variable is public. But let's say we want to initialize the supported member variables. We can do this in the equivalent of a constructor, otherwise known as an `init` function in Python:
+Note that we didn't define Koala to have any public/private variables or anything like that. Instead, all member variables can be defined at runtime and by default every variable is public (in fact, private variables [don't exist](https://docs.python.org/3.7/tutorial/classes.html#private-variables) in Python). But let's say we want to initialize the supported member variables. We can do this in the equivalent of a constructor, otherwise known as an `init` function in Python:
 
 ```python
 class Koala:
@@ -436,7 +436,7 @@ class Animal:
         print(self.sound)
 ```
 
-If we want to re-use the functionality from `Animal` in our usage of `Koala` we can **inherit** from the parent class `Animal` by adding the parent class name within parentheses:
+If we want to re-use the functionality from `Animal` in our usage of `Koala` we can [**inherit**](https://docs.python.org/3.7/tutorial/classes.html#inheritance) from the parent class `Animal` by adding the parent class name within parentheses:
 
 ```python
 class Koala(Animal):

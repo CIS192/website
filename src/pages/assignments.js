@@ -16,12 +16,12 @@ const Teaching = () => {
 	          </p> <br />
             <p><strong>Pythonic Foundations</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-	            <a class="panel-block list-group-item is-primary" href="https://github.com/CIS192/homework/blob/master/assignment1.py" download>Assignment 1: Finger Workouts</a>
-	            <a class="panel-block list-group-item is-primary" href="https://github.com/CIS192/homework/blob/master/assignment2.py">Assignment 2: Data Structures and Algorithms</a>
+	            <a class="panel-block list-group-item is-primary" href="https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py" download>Assignment 1: Finger Workouts</a>
+	            <a class="panel-block list-group-item is-primary" href="https://raw.githubusercontent.com/CIS192/homework/master/assignment2.py" download>Assignment 2: Data Structures and Algorithms</a>
 	          </div>
 	          <p><strong>Data Science</strong></p>
 	          <div class="panel list-group" style={{marginTop: "1rem", borderRadius: "0.2rem"}}>
-	            <a class="panel-block list-group-item is-primary">Assignment 3: Learning Machine Learning</a>
+	            <a class="panel-block list-group-item is-primary" href="/assignments/3">Assignment 3: Learning Machine Learning</a>
 	            <a class="panel-block list-group-item is-primary">Assignment 4: Hyperparameter Search</a>
 	          </div>
 	          <p><strong>Web Development</strong></p>

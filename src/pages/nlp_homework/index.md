@@ -2,11 +2,16 @@
 path: "/assignments/3"
 ---
 
-# Homework 2: Natural Language Processing
-
+# Assignment 3: Learning Machine Learning
 In our third assignment, we will be exploring the field of computational linguistics, otherwise known as **Natural Language Processing**. The goal of this assignment is to have you become familiar with working with reading/writing to files, and working with third party packages. We'll explore these Python ideas through the lens of Data Science and Machine Learning.
 
+## Part 0: Setup
+Skim through the assignment and install the relevant packages for this assignment through pip (e.g. [Sci-Kit Learn](https://github.com/scikit-learn/scikit-learn) and [NumPy](https://github.com/numpy/numpy)). Next, download the homework datasets [here](https://github.com/CIS192/homework/raw/master/assignment3/data.zip) (or from the GitHub repository). Finally, download the skeleton code, as well as the report template from the [assignment's GitHub repository](https://github.com/CIS192/homework/tree/master/assignment3).
+
 ## Part 1: NLP Basics
+For the first part of the homework you will be implementing a couple of basic NLP tasks in `part1.py`, including raw text analysis with CSV, text tokenizing, and word importance with a score called TF-IDF. The data file `raven.txt` is located in the `data.zip` file, so make sure to unzip it to `/data`! The remaining dataset files will be used for Part 2, so be sure to keep those handy.
+
+**TODO:** Implement the incomplete stubs in `part1.py`.
 
 ## Part 2: Classification with Sci-Kit Learn
 > Adapted from CIS 530 - Computational Linguistics
@@ -19,7 +24,8 @@ In the provided code template with proveded helper and unimplemented functions, 
 0. Look at the dataset! Try to understand the information that is conveyed to better understand the task.
 1. Implement the machine learning evaluation metric we discussed in class (accuracy).
 2. Perform data pre-processing for our dataset. You will need to parse the provided pre-labeled data in training/test sets, and implement a simple baseline model.
-3. Use the Sci-Kit Learn package to train machine learning models which classify words as simple or complex.
+3. Use the Sci-Kit Learn package to train machine learning models which classif
+y words as simple or complex.
 
 We have provided the dataset of labelled words split between training/test sets in (.txt) format. Some notes on the dataset:
 
@@ -94,3 +100,6 @@ Be sure to complete the report in [Markdown](https://github.com/adam-p/markdown-
 
 ## Submission
 Submit all your code and potentially extra data to Gradescope. If you have a partner, YOU MUST MARK THEM AS A COLLABORATOR ON GRADESCOPE. If you fail to do this, you may get a 0 on this assignment.
+
+## Attributions
+<small> This homework was adapted from [CIS 530: Computational Linguistics at the University of Pennsylvania](computational-linguistics-class.org/) by Arun Kirubarajan and Kevin Sun.</small>

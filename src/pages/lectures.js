@@ -23,47 +23,47 @@ const lectures = [
     notes: "/modules",
   },  
   {
-    week: 3,
-    topics: "Natural Language Processing with NLTK",
-    notes: "/nlp",
-  },
-  {
     week: 4,
     topics: "Machine Learning with NumPy and Sci-Kit Learn",
     notes: "/ml",
   },
   {
     week: 5,
+    topics: "Natural Language Processing with NLTK",
+    notes: "/nlp",
+  },
+  {
+    week: 6,
     topics: "Deep Learning with Keras/Tensorflow",
     notes: "/ml",
   },
   {
-    week: 6,
+    week: 7,
     topics: "REST APIs with Flask",
     notes: "/flask",
   },
   {
-    week: 7,
+    week: 8,
     topics: "Full Stack Development with Django",
     notes: "/django1",
   },
   {
-    week: 8,
+    week: 9,
     topics: "Relational Databases and Security",
     notes: "/django2",
   },
   {
-    week: 9,
+    week: 10,
     topics: "Cloud Computing with Docker",
     notes: "/docker",
   },
   {
-    week: 10,
+    week: 11,
     topics: "Lightning Lectures [TBD]",
     notes: "/lightning",
   },
   {
-    week: 11,
+    week: 12,
     topics: "Course Wrap-Up",
     notes: "/final",
   },

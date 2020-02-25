@@ -467,3 +467,21 @@ def dfs(node, visited):
 ```
 
 Ah, feels good.
+
+---
+
+### References
+
+1. [Sets - Python Docs](https://docs.python.org/3.7/tutorial/datastructures.html#sets)
+2. [In - Python Docs](https://docs.python.org/3/reference/expressions.html#in)
+3. [Tuples and Sequences - Python Docs](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)
+4. [Lists - Python Docs](https://docs.python.org/3.7/tutorial/introduction.html#lists)
+5. [More List Methods - Python Docs](https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists)
+6. [Sorted - Python Docs](https://docs.python.org/3.7/library/functions.html#sorted)
+7. [Strings - Python Docs](https://docs.python.org/3.7/library/stdtypes.html#string-methods)
+8. [Dictionaries - Python Docs](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries)
+9. [Default Dictionaries - Python Docs](https://docs.python.org/3.7/library/collections.html#defaultdict-objects)
+10. [Classes - Python Docs](https://docs.python.org/3.7/tutorial/classes.html#a-first-look-at-classes)
+11. [Private Variables - Python Docs](https://docs.python.org/3.7/tutorial/classes.html#private-variables)
+12. [Inheritance - Python Docs](https://docs.python.org/3.7/tutorial/classes.html#inheritance)
+13. [Collections - Python Docs](https://docs.python.org/3/library/collections.html)

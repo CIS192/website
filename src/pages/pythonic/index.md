@@ -388,3 +388,15 @@ It's easy to see how powerful decorators are when we see them in action. We're g
 
 ## References
 1. https://dbader.org/blog/python-iterators
+2. [init - Python Docs](https://docs.python.org/3.7/reference/datamodel.html#object.__init__)
+3. [len - Python Docs](https://docs.python.org/3.7/reference/datamodel.html#object.__len__)
+4. [Static Methods - Python Docs](https://docs.python.org/3.7/library/functions.html#staticmethod)
+5. [Class Methods - Python Docs](https://docs.python.org/3.7/library/functions.html#classmethod)
+6. [Copy - Python Docs](https://docs.python.org/3.7/library/copy.html#module-copy)
+7. [Positional Arguments 1 - Python Docs](https://docs.python.org/3.7/tutorial/controlflow.html#arbitrary-argument-lists)
+8. [Positional Arguments 2 - Python Docs](https://docs.python.org/3/glossary.html#term-argument)
+10. [Keyword Arguments - Python Docs](https://docs.python.org/3.7/tutorial/controlflow.html#keyword-arguments)
+11. [List Comphrensions - Python Docs](https://docs.python.org/3.7/tutorial/datastructures.html#list-comprehensions)
+12. [Generators - Python Docs](https://docs.python.org/3.7/tutorial/classes.html#generators)
+13. [Lambda Functions - Python Docs](https://docs.python.org/3.7/tutorial/controlflow.html#lambda-expressions)
+14. [Decorators - Python Docs](https://docs.python.org/3.7/glossary.html#term-decorator)

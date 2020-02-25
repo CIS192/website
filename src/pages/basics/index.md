@@ -284,7 +284,7 @@ This is enough Python syntax to get you started, and at the very least will let 
 3. [If-statements - Python Docs](https://docs.python.org/3.7/tutorial/controlflow.html#if-statements)
 4. [While-loop - Python Docs](https://docs.python.org/3.7/reference/compound_stmts.html#while)
 5. [Continue statement - Python Docs](https://docs.python.org/3.7/reference/simple_stmts.html#the-continue-statement)
-6. [Break statement](https://docs.python.org/3.7/reference/simple_stmts.html#the-break-statement)
+6. [Break statement - Python Docs](https://docs.python.org/3.7/reference/simple_stmts.html#the-break-statement)
 7. [For-statements - Python Docs](https://docs.python.org/3.7/tutorial/controlflow.html#for-statements)
 8. [Range function - Python Docs](https://docs.python.org/3.7/tutorial/controlflow.html#the-range-function)
 9. [Functions - Python Docs](https://docs.python.org/3.7/tutorial/controlflow.html#defining-functions)

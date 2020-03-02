@@ -29,7 +29,7 @@ y words as simple or complex.
 
 We have provided the dataset of labelled words split between training/test sets in (.txt) format. Some notes on the dataset:
 
-1. The training set is disjoint, so a word in `complex_words_training.txt` will not appear in the other two.
+1. The training set is disjoint, so a word in `complex_words_training.txt` will not appear in the training set.
 2. Stop-words and proper nouns are already removed, leaving only nouns, verbs, and adjectives.
 3. There are 4,000 training words, and 922 testing words.
 4. The relevant columns are WORD (the word to be classified), and LABEL (0 for simple, 1 for complex). Note that LABEL is not included in the test dataset.

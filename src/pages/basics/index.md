@@ -99,7 +99,7 @@ So the command-line interpreter is pretty great, but as *real* programmers we wa
 First, run `ls` in your terminal to **list contents** of the current directory. This is good for some developmental awareness of your current working environment. Next, run `mkdir lecture1` to **create a folder** named `lecture1` in your current directory. Then, run `cd lecture1` to **change directory** into `lecture1`. Finally, we'll run `touch lecture1.py` to **create a file** named `lecture1.py`, which has the valid `.py` extension for our Python interpreter to run the file appropriately. We can now do a little command-line trick and run:
 
 ```
-echo print("hello world") >> lecture1.py
+echo 'print("hello world")' >> lecture1.py
 ``` 
 
 which "writes" `print("hello world")` to `lecture1.py`. Now, if we run `cat lecture1.py`, we should be able to **view contents** of the file. 

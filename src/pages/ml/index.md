@@ -5,6 +5,8 @@ path: /ml
 # Machine Learning and Data Science
 In lecture, we talked about how **Machine Learning** just boils down to making predictions about the world, given adequete data. We also learned about a variety of different techniques for the machine learning process, namely data pre-processing and splitting data into a training/test split.
 
+Slides from lecture are available [here](https://kirubarajan.nyc3.digitaloceanspaces.com/spring2020/Machine%20Learning%20I.pdf).
+
 ## Analyzing Cereal
 In lecture, we took a look at the [Cereal Dataset](https://www.kaggle.com/crawford/80-cereals) from Kaggle. 
 

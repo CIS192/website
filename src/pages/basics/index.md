@@ -225,7 +225,7 @@ counter = 0
 
 while counter < 10:
     print("counter is less than 10")
-    count += 1
+    counter += 1
 ```
 
 This will have the program print `"counter is less than 10"` ten times. Again, notice the simple definition of the condition, the `:` token, and the indentation. Again, indentation is VERY important in Python!

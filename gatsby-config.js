@@ -10,6 +10,12 @@ module.exports = {
     description: 'This is the blog of Arun'
   },
   plugins: [
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-copy-linked-files`],
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-transformer-remark`,

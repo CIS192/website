@@ -244,7 +244,7 @@ If you noticed, the previous bit of code involved us essentially executing a [fo
 
 ```python
 for counter in range(10):
-    print("counter is less than 10)
+    print("counter is less than 10")
 ```
 
 What does the [`range()`](https://docs.python.org/3.7/tutorial/controlflow.html#the-range-function) function do? It returns a `range` object, which is an iterable. We'll expand on what this means later, but for now it just gives us an object that contains the integers between 0 and 9 that we can iterate over. Although there is no explicit condition in the for loop, we can see that the loop terminates when there are no more elements left in the `range` object to iterate over. 

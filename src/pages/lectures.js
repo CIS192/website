@@ -35,7 +35,7 @@ const lectures = [
   {
     week: 6,
     topics: "Deep Learning with Keras/Tensorflow",
-    notes: "/ml",
+    notes: "/deep",
   },
   {
     week: 7,

@@ -31,8 +31,8 @@ We have provided the dataset of labelled words split between training/test sets 
 
 1. The training set is disjoint, so a word in `complex_words_training.txt` will not appear in the test set.
 2. Stop-words and proper nouns are already removed, leaving only nouns, verbs, and adjectives.
-3. There are 4,000 training words, and 922 testing words.
-4. The relevant columns are WORD (the word to be classified), and LABEL (0 for simple, 1 for complex). Note that LABEL is not included in the test dataset.
+3. There are 4,000 training words, and 1,000 testing words.
+4. The relevant columns are WORD (the word to be classified), and LABEL (0 for simple, 1 for complex).
 
 We have also provided frequencies (a contiguous sequence of 1 item from a given sample of text or speech) from the [Google N-Gram Corpus](https://books.google.com/ngrams/info). This is to provide you another feature for classification. Consider why this extra information is useful for distinguishing between simple and complex words.
 

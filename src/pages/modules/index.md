@@ -1,13 +1,15 @@
 ---
-path: "/modules"
+path: '/modules'
 ---
 
 # Exceptions, Files, and Modules
+
 > Disclaimer: these notes are a work in progress
 
-In this section, we're going to progress from Python-specific functionality back to familiar paradigms and modules from other languages. The goal for this lecture is to build the foundations to work on larger software projects that you might not be used to (since coursework and problem sets tend to be a little smaller in nature). 
+In this section, we're going to progress from Python-specific functionality back to familiar paradigms and modules from other languages. The goal for this lecture is to build the foundations to work on larger software projects that you might not be used to (since coursework and problem sets tend to be a little smaller in nature).
 
 ## Exceptions
+
 Sometimes, things go wrong. We can preemptively catch these errors:
 
 ```python
@@ -51,12 +53,15 @@ raise InputError("you did something bad", "fix it!")
 ```
 
 ## Modules
-Sometimes, we want to *modularize* our codebase into seperate components that can interact with each other.
+
+Sometimes, we want to _modularize_ our codebase into seperate components that can interact with each other.
 
 ### Writing Our Own Modules
+
 We can import entire modules using `import xyz` or we can import submodules using `from xyz import abc`.
 
 ### Importing First-Party Modules
+
 For example, we can import the `random` module:
 
 ```python
@@ -70,13 +75,17 @@ from random import choice
 ```
 
 ### Importing Third-Party Modules
+
 If we write a function in another file, we can import it by calling `from script import function`.
 
 ## Files
-Sometimes, we want to leverage information from the *outside world*. 
+
+Sometimes, we want to leverage information from the _outside world_.
 
 ### Reading From Files
+
 Coming soon!
 
 ### Writing To Files
+
 Coming soon!

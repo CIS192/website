@@ -1,8 +1,9 @@
 ---
-path: "/unix"
+path: '/unix'
 ---
 
 # Unix Commands
+
 > Don't be afraid of the terminal!
 
 ## Files

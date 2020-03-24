@@ -1,8 +1,9 @@
 ---
-path: "/data_structures"
+path: '/data_structures'
 ---
 
 # Data Structures and Algorithms
+
 > Efficiently Implementing Ideas in Python
 
 Writing efficient code is part of growing as a developer, and it's what seperates real programmers from the weak. Think back to CIS 121, why do we want to use Merge Sort over Bubble Sort? Long answer: it has to do with the complexity of $O(n^2)$ being asymptotically larger than $O(n \operatorname{log} n)$. Short answer: we care about good practice, and good practice is often nothing more than better performing code, especially in Python. In this lecture, I hope to convince you of this.
@@ -11,7 +12,7 @@ Disclaimer: we don't really care about asymptotic complexity much in this class.
 
 ## Sets
 
-Let's take it to the basics. We want to store just *some collection* of things. That is, we want to maintain an *unordered* bag of objects. In math and computer science, this construct is known as a **set**. Similarly, in Python this is called a [`set`](https://docs.python.org/3.7/tutorial/datastructures.html#sets) (suprise, suprise).
+Let's take it to the basics. We want to store just _some collection_ of things. That is, we want to maintain an _unordered_ bag of objects. In math and computer science, this construct is known as a **set**. Similarly, in Python this is called a [`set`](https://docs.python.org/3.7/tutorial/datastructures.html#sets) (suprise, suprise).
 
 ### Instantiation
 
@@ -22,7 +23,8 @@ students = set()
 ```
 
 ### Inserting/Deleting
-Recall that sets maintain unique elements (no duplicates) and each inserted element is *immutable* (cannot be changed). We can insert into our newly created set by using the `.add()` method, which takes in any object as input. Or, we can also directly write elements into the curly braces:
+
+Recall that sets maintain unique elements (no duplicates) and each inserted element is _immutable_ (cannot be changed). We can insert into our newly created set by using the `.add()` method, which takes in any object as input. Or, we can also directly write elements into the curly braces:
 
 ```python
 students.add("Arun")
@@ -57,7 +59,7 @@ if students:
 
 ### Size
 
-Getting the length of a set is pretty much the same as with all data structures, and can be done by calling `len()`, and *passing* the set as an argument to the function:
+Getting the length of a set is pretty much the same as with all data structures, and can be done by calling `len()`, and _passing_ the set as an argument to the function:
 
 ```python
 number_of_students = len(students)
@@ -80,7 +82,7 @@ The shorthand for this is `set1 & set2`, which makes sense if you think of inter
 
 ## Tuples
 
-How do we get a specific element from a set? Turns out, we can't. This is a limitation in the *API* of sets; they're mainly used as a means of checking existence of certain objects. Let's move onto data structures that we can index into, thus preserving some notion of *order*. Recall a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) from CIS 120 as being an **immutable** sequence of elements. 
+How do we get a specific element from a set? Turns out, we can't. This is a limitation in the _API_ of sets; they're mainly used as a means of checking existence of certain objects. Let's move onto data structures that we can index into, thus preserving some notion of _order_. Recall a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) from CIS 120 as being an **immutable** sequence of elements.
 
 ### Instantiation
 
@@ -99,20 +101,20 @@ Note that Python, like most sane languages, is designed to support 0-indexing. T
 arun_score = student[1]
 ```
 
-Some cool functionality supported by Python is **negative indexing**, this let us index by counting down from the *end* of the tuple:
+Some cool functionality supported by Python is **negative indexing**, this let us index by counting down from the _end_ of the tuple:
 
 ```python
 arun_score = student[-1]
 ```
 
-Tuples can also be defined *without* the braces. The following two lines of Python are equivalent:
+Tuples can also be defined _without_ the braces. The following two lines of Python are equivalent:
 
 ```python
 student = (name, score)
 student = name, score
 ```
 
-Tuple **destructuring* is also a really elegant way of instantiating multiple variables *on the same line*:
+Tuple \*_destructuring_ is also a really elegant way of instantiating multiple variables _on the same line_:
 
 ```python
 age, name, score = 20, "Arun", 100
@@ -132,13 +134,13 @@ Even if you don't end up using tuples much in your code, you will definitely use
 # instantiate variables
 x, y = 5, 10
 # swap
-x, y = y, x 
+x, y = y, x
 # clean up after blown mind
 ```
 
 ### Insertion/Removal
 
-Tuples are designed to be **immutable**, so we actually can't change the contents of a tuple once it's been instantiated. That is, if we tried to set `student[1] = 99`, the code would crash. A little "gotcha" with tuples is that although the tuple itself cannot change, the values within the tuple are subject to mutation. This is because if we held a tuple of objects (which is no more than storing the *memory locations* of the objects), and the objects were to change, the tuple would still hold reference to the mutated objects.
+Tuples are designed to be **immutable**, so we actually can't change the contents of a tuple once it's been instantiated. That is, if we tried to set `student[1] = 99`, the code would crash. A little "gotcha" with tuples is that although the tuple itself cannot change, the values within the tuple are subject to mutation. This is because if we held a tuple of objects (which is no more than storing the _memory locations_ of the objects), and the objects were to change, the tuple would still hold reference to the mutated objects.
 
 A hack-y way to get around the lack of insertion with tuples is just to concatenate tuples together:
 
@@ -161,7 +163,7 @@ three_ones = (1) * 3
 
 ## Lists
 
-What if we wanted the indexing power of a tuple, but in the form of a *mutable* data structure, one that allows us to change the contents inside. Suprise suprise - we've arrived back at the array! In Python, these are lovingly known as **lists**. [Lists](https://docs.python.org/3.7/tutorial/introduction.html#lists) are completely mutable objects that can contain *any* arbitrary datatype. This means that we can have a list containing strings, integers, and custom Koala objects,
+What if we wanted the indexing power of a tuple, but in the form of a _mutable_ data structure, one that allows us to change the contents inside. Suprise suprise - we've arrived back at the array! In Python, these are lovingly known as **lists**. [Lists](https://docs.python.org/3.7/tutorial/introduction.html#lists) are completely mutable objects that can contain _any_ arbitrary datatype. This means that we can have a list containing strings, integers, and custom Koala objects,
 
 ### Instantiation
 
@@ -229,6 +231,7 @@ for row in pixels:
 ```
 
 ### Sorting
+
 We can sort lists in a variety of ways. The first is to call [`sorted()`](https://docs.python.org/3.7/library/functions.html#sorted) on the list. This creates a **copy** of the original list:
 
 ```python
@@ -245,7 +248,7 @@ numbers.sort()
 print(numbers[0]) # -> prints 0
 ```
 
-We can even sort in descending order by passing in a *keyword* arguement `reverse`:
+We can even sort in descending order by passing in a _keyword_ arguement `reverse`:
 
 ```python
 numbers = [1, 5, 4, 12, 3, 0]
@@ -261,7 +264,7 @@ students.sort(key=len) # -> sorts by length of each string
 print(numbers[0]) # -> prints Bob
 ```
 
-We can also use this `key` arguement to sort a list of tuples. By default, sorting a list of tuples operates on the *first* element of each tuple in the list. We can use the `key` arguement to sort by the *second* element in eachh tuple:
+We can also use this `key` arguement to sort a list of tuples. By default, sorting a list of tuples operates on the _first_ element of each tuple in the list. We can use the `key` arguement to sort by the _second_ element in eachh tuple:
 
 ```python
 students = [("Arun", 50), ("Bob", 80), ("Kevin", 100)]
@@ -269,7 +272,7 @@ students.sort(key=lambda x: x[1], reverse=True)
 print(students[0]) # -> prints ("Kevin", 100)
 ```
 
-We've thrown a couple of obscure concepts here: functions as objects and `lambda` functions. We'll cover both of these in our section on *Functional Programming*. Until then, feel free to think about these concepts only in the context of sorting lists!
+We've thrown a couple of obscure concepts here: functions as objects and `lambda` functions. We'll cover both of these in our section on _Functional Programming_. Until then, feel free to think about these concepts only in the context of sorting lists!
 
 ## Strings
 
@@ -281,7 +284,7 @@ Recall that a string can be instantiated by defining the characters within quota
 name = "Arun Kirubarajan"
 ```
 
-Remember to note that strings are immutable, which means that we can only alter `name` by redefining a *new* string, either by concatenation (an $O(n)$ operation), or by redefining the string completely.
+Remember to note that strings are immutable, which means that we can only alter `name` by redefining a _new_ string, either by concatenation (an $O(n)$ operation), or by redefining the string completely.
 
 ### Substrings
 
@@ -294,7 +297,7 @@ if "Arun" in name:
 
 ### Slicing
 
-Now, imagine we have the need of actually computing the substrings within the string. This can be done using `slicing`, another elegant Python operation. To slice a string we just need to provide the starting index (*inclusive*), and the ending index (*exclusive*), seperated by a colon `:`.
+Now, imagine we have the need of actually computing the substrings within the string. This can be done using `slicing`, another elegant Python operation. To slice a string we just need to provide the starting index (_inclusive_), and the ending index (_exclusive_), seperated by a colon `:`.
 
 ```python
 first_name = name[0:4]
@@ -314,7 +317,7 @@ Finally, we can provide a value after a second second colon `:` to indicate the 
 every_second_letter = name[::2]
 ```
 
-Note that calling slicing using `[::1]` is equivalent to the identity function. A corrolary of this is that we can *reverse* a list quickly by providing a step size of `-1`:
+Note that calling slicing using `[::1]` is equivalent to the identity function. A corrolary of this is that we can _reverse_ a list quickly by providing a step size of `-1`:
 
 ```python
 reversed_name = name[::-1]
@@ -334,9 +337,9 @@ How convenient!
 
 ## Dictionaries
 
-One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. In Python, these data structures are known as [**dictionaries**](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries). Furthermore, they're *even easier* to instantiate and use in Python. Dictionaries are **mutable** data structures that can take an arbitrary object as a key, and provide an arbitrary object as a value.
+One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. In Python, these data structures are known as [**dictionaries**](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries). Furthermore, they're _even easier_ to instantiate and use in Python. Dictionaries are **mutable** data structures that can take an arbitrary object as a key, and provide an arbitrary object as a value.
 
-### Instantiation 
+### Instantiation
 
 We can create a dictionary by either calling `dict()` or by writing out its contents within curly braces `{}`:
 
@@ -363,18 +366,19 @@ del scores["Arun"]
 ```
 
 ### Default Dictionary
+
 If we index into a dictionary with a key that doesn't exist, then our code will crash. We can check key existence with a dictionary by using the `in` operator:
 
 ```python
 if "Imposter Arun" not in scores:
     scores["Imposter Arun"] = 0
 else:
-    scores["Imposter Arun"] = scores["Imposter Arun"] + 1 
+    scores["Imposter Arun"] = scores["Imposter Arun"] + 1
 ```
 
-But sometimes, this isn't very compact. We can instantiate a dictionary with an initialized value by using the [`defaultdict`](https://docs.python.org/3.7/library/collections.html#defaultdict-objects) package. We haven't covered imports yet, but this package is a module that comes bundled with Python (known as a *first-party* package) and includes a variety of useful features that we don't need to implement again.
+But sometimes, this isn't very compact. We can instantiate a dictionary with an initialized value by using the [`defaultdict`](https://docs.python.org/3.7/library/collections.html#defaultdict-objects) package. We haven't covered imports yet, but this package is a module that comes bundled with Python (known as a _first-party_ package) and includes a variety of useful features that we don't need to implement again.
 
-At the top of our code we can add `from collections import defaultdict`, and we can now have a dictionary that has all of its values initialized to 0. 
+At the top of our code we can add `from collections import defaultdict`, and we can now have a dictionary that has all of its values initialized to 0.
 
 ```python
 words = ["I", "am", "going", "to", "the", "store", "I", "like", "the", "store"]
@@ -385,7 +389,7 @@ for word in words:
     # do not need to worry about any errors!
 ```
 
-By default, the `defaultdictionary` has all of its keys initialized to the default integer value of 0, but we can specify types by passing a data-type into the constructor of the default dict. 
+By default, the `defaultdictionary` has all of its keys initialized to the default integer value of 0, but we can specify types by passing a data-type into the constructor of the default dict.
 
 ```python
 default_names = defaultdict(str)
@@ -404,7 +408,7 @@ class Koala:
     pass
 ```
 
-The `pass` keyword indicates that there is no code to execute in the current block, and to escape to the next scope. Now, we can provide our Koala with *as many* member variables as we want:
+The `pass` keyword indicates that there is no code to execute in the current block, and to escape to the next scope. Now, we can provide our Koala with _as many_ member variables as we want:
 
 ```python
 koala = Koala()
@@ -431,7 +435,7 @@ Let's say we have a class made to represent animals:
 class Animal:
     def __init__(self, sound):
         self.sound = sound
-    
+
     def make_sound(self):
         print(self.sound)
 ```
@@ -443,18 +447,18 @@ class Koala(Animal):
     def __init__(self, sound, name):
         Animal.__init__(self, sound)
         self.name = name
-    
+
     def say_name(self):
         print("My name is " + self.name)
 ```
 
-Notice that we can call `__init__` on the parent class to invoke the constructor, which *overrides* the constructor from the child class definition. We could do the same thing with the `make_sound` function, and a general rule of thumb is that we like to extend function definitions (like we do in the above example) rather than completely redefining them.
+Notice that we can call `__init__` on the parent class to invoke the constructor, which _overrides_ the constructor from the child class definition. We could do the same thing with the `make_sound` function, and a general rule of thumb is that we like to extend function definitions (like we do in the above example) rather than completely redefining them.
 
 ## Conclusion
 
 We've only scratched the surface with the different operations and member functions available to use for each data structure. I highly recommend checking out the [documentation](https://docs.python.org/3/library/collections.html) for collections and the data structures shown today, since a lot of quirky/specific uses are too broad to cover in a single lecture. As we progress in the course, you'll be exposed to different Pythonic syntactic sugar as well as other powerful paradigms for manipulating variables/information efficiently.
 
-You might also be noticing some parallel APIs between lists, tuples, and strings. We'll make these similarities concrete when we talk about *Iterators* next lecture. For now, just appreciate how easy it is to remember all the various operations!
+You might also be noticing some parallel APIs between lists, tuples, and strings. We'll make these similarities concrete when we talk about _Iterators_ next lecture. For now, just appreciate how easy it is to remember all the various operations!
 
 For now, some fun exercises would be to implement canonical algorithms from CIS 121 such as DFS, BFS, Djikstra, Merge Sort, and Union Find. You'll find that a vast majority of algorithms have an elegant solution in Python! I'll leave you with a 5 line implementation of DFS in Python (for a vertex `node` and a set of `nodes` named `visited`):
 

@@ -26,20 +26,20 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <a
+              <div
                 class="panel-block list-group-item is-primary"
                 href="https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py"
                 download
               >
                 Assignment 1: Finger Workouts
-              </a>
-              <a
+              </div>
+              <div
                 class="panel-block list-group-item is-primary"
                 href="https://raw.githubusercontent.com/CIS192/homework/master/assignment2.py"
                 download
               >
                 Assignment 2: Data Structures and Algorithms
-              </a>
+              </div>
             </div>
             <p>
               <strong>Data Science</strong>
@@ -48,15 +48,15 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <a
+              <div
                 class="panel-block list-group-item is-primary"
                 href="/assignments/3"
               >
                 Assignment 3: Learning Machine Learning
-              </a>
-              <a class="panel-block list-group-item is-primary">
+              </div>
+              <div class="panel-block list-group-item is-primary">
                 Assignment 4: Hyperparameter Search
-              </a>
+              </div>
             </div>
             <p>
               <strong>Web Development</strong>
@@ -65,12 +65,12 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <a class="panel-block list-group-item is-primary">
+              <div class="panel-block list-group-item is-primary">
                 Assignment 5: Markdown Blog
-              </a>
-              <a class="panel-block list-group-item is-primary">
+              </div>
+              <div class="panel-block list-group-item is-primary">
                 Assignment 6: Twitter Clone
-              </a>
+              </div>
             </div>
             <p>
               <strong>Final Project</strong>
@@ -79,15 +79,15 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <a class="panel-block list-group-item is-primary">
+              <div class="panel-block list-group-item is-primary">
                 Milestone 1: Project Prosposal
-              </a>
-              <a class="panel-block list-group-item is-primary">
+              </div>
+              <div class="panel-block list-group-item is-primary">
                 Milestone 2: Final Project Submission
-              </a>
-              <a class="panel-block list-group-item is-primary">
+              </div>
+              <div class="panel-block list-group-item is-primary">
                 Milestone 3: Blog Post
-              </a>
+              </div>
             </div>
           </div>
           <div className="column"></div>

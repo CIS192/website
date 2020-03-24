@@ -1,4 +1,4 @@
-const ghpages = require('gh-pages')
+const ghpages = require('gh-pages');
 
 ghpages.publish(
   'public',
@@ -7,6 +7,6 @@ ghpages.publish(
     repo: 'https://github.com/cis192/cis192.github.io.git',
   },
   () => {
-    console.log('Deploy Complete!')
+    console.log('Deploy Complete!');
   }
-)
+);

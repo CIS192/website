@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'My Blog',
-    description: 'This is the blog of Arun'
+    description: 'This is the blog of Arun',
   },
   plugins: [
     {
@@ -25,11 +25,17 @@ module.exports = {
             resolve: 'gatsby-plugin-page-progress',
             options: {
               includePaths: ['/', { regex: '^/blog' }],
-              excludePaths: ['/', '/blog', '/consulting', '/teaching', '/research'],
+              excludePaths: [
+                '/',
+                '/blog',
+                '/consulting',
+                '/teaching',
+                '/research',
+              ],
               height: 5,
               prependToBody: false,
               color: `#8cc3f7`,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -41,7 +47,7 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: "language-",
+              classPrefix: 'language-',
               // This is used to allow setting a language for inline code
               // (i.e. single backticks) by creating a separator.
               // This separator is a string and will do no white-space
@@ -71,8 +77,8 @@ module.exports = {
               // existing language" below.
               languageExtensions: [
                 {
-                  language: "superscript",
-                  extend: "javascript",
+                  language: 'superscript',
+                  extend: 'javascript',
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -86,19 +92,19 @@ module.exports = {
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
-                user: "root",
-                host: "localhost",
+                user: 'root',
+                host: 'localhost',
                 global: false,
               },
-            }
+            },
           },
           {
             resolve: `gatsby-remark-katex`,
             options: {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`
-            }
-          }
+              strict: `ignore`,
+            },
+          },
         ],
       },
     },
@@ -106,8 +112,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
-    }
-  ]
-}
+        path: `${__dirname}/src/pages`,
+      },
+    },
+  ],
+};

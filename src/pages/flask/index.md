@@ -2,13 +2,13 @@
 path: '/flask'
 ---
 
-# REST APIs
+# An Intro to Web Dev
 
-> Introduction to Flask
+> Featuring the Web Framework Flask!
 
-As a programmer, it can seem like building websites involves a lot of brand-new frameworks and complex paradigms. However, the complexity of web development has actually lead to the creation of easy-to-use libraries that abstract most of the complicated processes.
+As a programmer, it can seem like building websites involves [countless](https://xkcd.com/927/) frameworks and [complex](https://xkcd.com/1270/) paradigms… However, the [complexity](https://www.cis.upenn.edu/~cis455/) of web development has actually led to the creation of easy-to-use libraries and frameworks that abstract most of the complicated processes!
 
-In this section of the course, we will be working with a framework for web development: Flask. This homework assignment will have you building a REST API in Flask. Web development involves a lot of moving parts - we recommend you ask many questions!
+In this lecture, we will be working with [Flask](https://github.com/pallets/flask), a Python framework for web development, by using it to build a [REST API](https://developer.mozilla.org/en-US/docs/Glossary/REST). Web development involves a lot of moving parts - we recommend you ask many questions!
 
 ## HTTP and REST APIs
 
@@ -18,9 +18,11 @@ HTTP is a protocol that consists solely of requests and responses. HTTP is state
 
 The client and server can exist as one application or separately (as is typically the case with Flask). The actual layers of the protocol can get very technical, but this is essentially all you need to understand as a Python developer. As Python developers, we build **REST APIs**, server applications that respond to requests accessed through urls (e.g. http://upenn.edu) over HTTP. Data in REST API’s are typically sent and received using **JSON** (Javascript Object Notation), which follows a key-value interface similar to dictionaries.
 
+If you are interested in learning more about the infastructure of the web, we recommend checking out [NETS-150](https://www.cis.upenn.edu/~mkse150/), [NETS-212](https://www.cis.upenn.edu/~nets212/), or if you are feeling really adventurous, [CIS-455](https://www.cis.upenn.edu/~cis455/)!
+
 ## Introducing: Flask
 
-We will be building a REST API in Python using a library named **Flask**. Flask is a web framework that allows us to build a server that other applications can make HTTP requests to. Flask is the backbone for the architecture of a lot of Python software, including LinkedIn and Pinterest (but is 100% open source).
+As mentioned above, we will be building a REST API in Python using a library named [Flask](https://github.com/pallets/flask). Flask is a web framework that allows us to build a server that other applications can make HTTP requests to. Flask is the backbone for the architecture of a lot of Python software, including [LinkedIn](https://engineering.linkedin.com/blog/) and [Pinterest](https://medium.com/pinterest-engineering/) (but is 100% open source).
 
 ## Creating a Flask application
 
@@ -59,6 +61,8 @@ We define a dictionary mapping questions to answers before we define routes:
 
 ```python
 answers = dict()
+# This also works!
+answers = {}
 ```
 
 We can now create another route to take in an argument (a string value of the question) and return a result in JSON. We import the `jsonify` and `request` module from Flask using `from flask import jsonify, request`. We can now add another route that takes in a string of the question (using only alphanumeric characters with underscores for spaces):
@@ -73,7 +77,7 @@ def get_answer():
 		return jsonify({"status": 404, "message": "No answer."})
 ```
 
-Now, we can access this route from our browser supplying a URL argument for the question `localhost:8000/api/answers?question=what_is_love`. Clearly, we don’t have any questions or answers, we can change that by adding another route for adding a question and answer pairing.
+Now, we can access this route from our browser supplying a URL argument for the question `localhost:5000/api/answers?question=what_is_love`. Clearly, we don’t have any questions or answers, we can change that by adding another route for adding a question and answer pairing.
 
 ## Making Requests to Insert
 
@@ -97,6 +101,18 @@ curl --header "Content-Type: application/json" \
   --data '{"question":"what_is_love", "answer":"dont_hurt_me"}' \
   http://localhost:5000/api/answers
 ```
+
+If you're not on a UNIX based system (looking at you, Windows) then you can download [curl](https://curl.haxx.se/) here. Instead of the above command, navigate to the directory you unzipped the curl executable in, and run
+```bash
+curl.exe --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"question":"what_is_love", "answer":"dont_hurt_me"}' \
+  http://localhost:5000/api/answers
+```
+instead. (Same thing, except we're telling Windows to use the curl executable we downloaded.)
+
+Or install a graphical HTTP client like [Postman](https://www.postman.com/), and click the 'Send' button after filling out the fields like below:
+![screenshot](https://i.imgur.com/PedEksL.png)
 
 ## Exporting to JSON
 
@@ -133,7 +149,7 @@ def get_answer():
 ```
 
 **DISCLAIMER**
-Saving to a local file (like our `db.json`) can create consistency issues if multiple users edit/query the same file at the same time. We’ll ignore this scenario for this course since it isn’t a Python-specific issue.
+Saving to a local file (like our `db.json`) can create consistency issues if multiple users edit/query the same file at the same time. We’ll ignore this scenario for this course since it isn’t a Python-specific issue. There are [entire courses](https://www.seas.upenn.edu/~cis550/) devoted to solving this and the other challenges that arise when storing data, if you're interested.
 
 ## Rendering HTML
 
@@ -146,6 +162,7 @@ def render_answer():
 	with open('db.json', 'r') as db_read:
 		answers = json.load(db_read)
 	if question in answers:
+		# Make sure to also import render_template from flask in the imports above!
 		return render_template("answer.html", question=question, answer=answers[question])
 	else:
 		return jsonify({"status": 404, "message": "No answer."})
@@ -175,3 +192,5 @@ In this section of the course, you learned some crucial paradigms for web develo
 5. HTML rendering
 
 Some next steps would involve adding more routes, some way to add users, and more front-end (HTML) pages! Feel free to email the staff if you have any questions!
+
+Later assignments will be in [Django](https://www.djangoproject.com/), another Python framework which comes with more built in functionality at the cost of being more abstract/harder to understand. Django is used by companies like [Instagram](https://instagram-engineering.com/web-service-efficiency-at-instagram-with-python-4976d078e366), [Spotify](https://labs.spotify.com/), and also in most Penn Labs products, like [Penn Course Review](https://github.com/pennlabs/pcr)! Hopefully, understanding the Flask code presented in this lecture will help you understand how to implement and debug the functionality of your future Django apps.

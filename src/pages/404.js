@@ -9,7 +9,12 @@ const ErrorPage = () => {
           <div className="column is-one-fourth"> </div>
           <div className="column is-half">
             <Nav />
-            <h1 className="title">404! 🐍</h1>
+            <h1 className="title">
+              404!{' '}
+              <span role="img" aria-label="snake">
+                🐍
+              </span>
+            </h1>
             <h1 className="subtitle">This page isn't ready yet!</h1>
             <p>
               Programming is hard.{' '}

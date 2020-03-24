@@ -9,7 +9,12 @@ const Index = () => {
           <div className="column is-one-fourth"> </div>
           <div className="column is-half">
             <Nav />
-            <h1 className="title">CIS 192: Python Programming 🐍</h1>
+            <h1 className="title">
+              CIS 192: Python Programming{' '}
+              <span role="img" aria-label="snake">
+                🐍
+              </span>
+            </h1>
             <h1 className="subtitle">Spring 2020</h1>
             <p>
               <strong>Instructor: </strong>{' '}

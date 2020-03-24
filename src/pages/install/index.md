@@ -1,5 +1,5 @@
 ---
-path: "/install"
+path: '/install'
 ---
 
 # Installing Python

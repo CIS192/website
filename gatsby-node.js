@@ -1,42 +1,42 @@
-const path = require("path");
+const path = require('path');
 
-exports.createPages = (({graphql, actions}) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const blogPostTemplate = path.resolve('src/templates/blogPost.js');
 
-    resolve (
+    resolve(
       graphql(
         `
-        query {
-          allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  path
+          query {
+            allMarkdownRemark {
+              edges {
+                node {
+                  frontmatter {
+                    path
+                  }
                 }
               }
             }
           }
-        }
         `
       ).then(result => {
-        const posts = result.data.allMarkdownRemark.edges
+        const posts = result.data.allMarkdownRemark.edges;
 
-        result.data.allMarkdownRemark.edges.forEach(({node}) => {
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           const path = node.frontmatter.path;
           createPage({
             path,
             component: blogPostTemplate,
             context: {
-              pathSlug: path
-            }
-          })
+              pathSlug: path,
+            },
+          });
 
           resolve();
         });
       })
-    )
+    );
   });
-})
+};

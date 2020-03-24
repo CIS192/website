@@ -3,14 +3,17 @@ path: /ml
 ---
 
 # Machine Learning and Data Science
+
 In lecture, we talked about how **Machine Learning** just boils down to making predictions about the world, given adequete data. We also learned about a variety of different techniques for the machine learning process, namely data pre-processing and splitting data into a training/test split.
 
 Slides from lecture are available [here](https://kirubarajan.nyc3.digitaloceanspaces.com/spring2020/Machine%20Learning%20I.pdf).
 
 ## Analyzing Cereal
-In lecture, we took a look at the [Cereal Dataset](https://www.kaggle.com/crawford/80-cereals) from Kaggle. 
+
+In lecture, we took a look at the [Cereal Dataset](https://www.kaggle.com/crawford/80-cereals) from Kaggle.
 
 ### Working With Files
+
 We used the following script to load the `"cereal.csv"` file:
 
 ```python
@@ -19,7 +22,7 @@ import pickle
 def get_points(file_path):
     with open(file_path) as dataset:
         points = dict()
-        
+
         for line in dataset.readlines()[1:]:
             fields = line.split(",")
             name, calories, sugar, rating = fields[0], float(fields[3]), float(fields[9]), float(fields[-1].strip())
@@ -41,11 +44,12 @@ save_points(points, "dataset.something")
 print(load_points("dataset.something"))
 ```
 
-This script opens the UTF-8 encoded `.csv` file, and reads in the relevant fields of `name`, `sugar`, `calories`, and `rating` before returning a dictionary of the different data points. 
+This script opens the UTF-8 encoded `.csv` file, and reads in the relevant fields of `name`, `sugar`, `calories`, and `rating` before returning a dictionary of the different data points.
 
-The `save_points` and `load_points` functions allow us to *serialize* a Python object into a file that is stored locally using the first-party `pickle` package. This is convinient, since we don't need to re-parse the file, and instead it is directly loaded into Python's "memory".
+The `save_points` and `load_points` functions allow us to _serialize_ a Python object into a file that is stored locally using the first-party `pickle` package. This is convinient, since we don't need to re-parse the file, and instead it is directly loaded into Python's "memory".
 
 ### Visualizing Data
+
 In this script, we `import`-ed our previous `get_points` function from the other module, and we used a third-party library named `matplotlib` to plot the points graphically:
 
 ```python
@@ -72,7 +76,8 @@ plt.show()
 The script plots either calories or sugar on the x-axis and the cereal's rating on the y-axis. We also annotate each point with the cereal's name to make our graph more interpretable.
 
 ### Training a Machine Learning Model
-Finally, we trained a machine learning model named `KNeighborsRegressor` to predict the rating of a cereal, given it's sugar and calories as **features**. The model is a variant of the K-Nearest Neighbours classifier discussed in class. However, the model performs a *regression* task of predicting a continuous value, rather than a discrete one.
+
+Finally, we trained a machine learning model named `KNeighborsRegressor` to predict the rating of a cereal, given it's sugar and calories as **features**. The model is a variant of the K-Nearest Neighbours classifier discussed in class. However, the model performs a _regression_ task of predicting a continuous value, rather than a discrete one.
 
 We first `import` the data points, partition the data into a training and testing splits, and then train the classifier:
 
@@ -92,7 +97,7 @@ training, test = data[:split], data[split:]
 training_data = np.array([(features[0], features[1]) for name, features in training]).astype(np.float64)
 training_labels = np.array([features[2] for name, features in training]).astype(np.float64)
 
-# formatting test data 
+# formatting test data
 test_data = np.array([(features[0], features[1]) for name, features in training]).astype(np.float64)
 test_labels = np.array([features[2] for name, features in training])
 
@@ -108,9 +113,11 @@ print(knn.score(test_data, test_labels))
 Our final two lines print some example predictions, followed by the model's evaluation score.
 
 ## Conclusion
+
 There are many different third-party tools and frameworks that make machine learning easy in Python. We discussed in class how they use [Cython](https://cython.org/) to speed up the performance of the code, and this will become more apparent in the following week's lectures, when we look into Natural Language Processing and Deep Learning!
 
 ## References
+
 1. Pickling (Official)
 2. Read/Writing to Files (Official)
 3. Sci-Kit Learn

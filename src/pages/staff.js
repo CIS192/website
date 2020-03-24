@@ -23,7 +23,7 @@ const staff_list = [
     name: 'Kevin Sun',
     role: 'Teaching Assistant',
     bio:
-      'Kevin is a sophomore from Cambridge, MA studying CIS and Statistics. He enjoys skiing and watching NBA. His favourite programming language is Python.',
+      'Kevin is a sophomore from Cambridge, MA studying CIS and Statistics. He enjoys skiing and watching NBA.',
     hours: 'Monday, 4:30 to 6:30 PM @ Rodin Mezzanine',
   },
   {
@@ -31,7 +31,7 @@ const staff_list = [
     name: 'Daniel Tao',
     role: 'Teaching Assistant',
     bio:
-      'Daniel is a sophomore from Chicago, IL studying Networked and Social Systems Engineering. He likes rhythm games, reading, pranks, and meaningful comedy.',
+      'Daniel is a sophomore from Chicago, IL studying NETS. He likes rhythm games, reading, pranks, and meaningful comedy.',
     hours: 'Thursdays, 1:30 to 3:00 PM @ Weiss Tech House',
   },
 ];
@@ -60,7 +60,7 @@ const Staff = () => {
       <div className="container">
         <div class="columns is-multiline">
           {staff_list.map(({ image, name, role, bio, hours }) => (
-            <div class="column is-one-third">
+            <div class="column is-one-fourth">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">

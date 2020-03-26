@@ -26,20 +26,25 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <div
-                class="panel-block list-group-item is-primary"
+              <a 
                 href="https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py"
                 download
               >
-                Assignment 1: Finger Workouts
-              </div>
+                <div
+                  class="panel-block list-group-item is-primary"
+                >
+                  Assignment 1: Finger Workouts
+                </div>
+              </a>
+              <a 
+                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment2.py"
+                download>
               <div
                 class="panel-block list-group-item is-primary"
-                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment2.py"
-                download
               >
                 Assignment 2: Data Structures and Algorithms
               </div>
+            </a>
             </div>
             <p>
               <strong>Data Science</strong>
@@ -48,15 +53,21 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <div
-                class="panel-block list-group-item is-primary"
-                href="/assignments/3"
+              <a href="/assignments/3">
+                <div
+                  class="panel-block list-group-item is-primary"
+                >
+                  Assignment 3: Learning Machine Learning
+                </div>
+              </a>
+              <a 
+                href="https://kirubarajan.nyc3.digitaloceanspaces.com/fall2019/deep_learning.ipynb"
+                download
               >
-                Assignment 3: Learning Machine Learning
-              </div>
-              <div class="panel-block list-group-item is-primary">
-                Assignment 4: Hyperparameter Search
-              </div>
+                <div class="panel-block list-group-item is-primary">
+                  Assignment 4: Learning Deep Learning
+                </div>
+              </a>
             </div>
             <p>
               <strong>Web Development</strong>

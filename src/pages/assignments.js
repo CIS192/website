@@ -65,7 +65,7 @@ const Teaching = () => {
                 download
               >
                 <div class="panel-block list-group-item is-primary">
-                  Assignment 4: Learning Deep Learning
+                  Assignment 4: Deeper Learning
                 </div>
               </a>
             </div>

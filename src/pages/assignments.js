@@ -61,11 +61,11 @@ const Teaching = () => {
                 </div>
               </a>
               <a 
-                href="https://kirubarajan.nyc3.digitaloceanspaces.com/fall2019/deep_learning.ipynb"
+                href="https://kirubarajan.nyc3.digitaloceanspaces.com/spring2020/deep_learning.ipynb"
                 download
               >
                 <div class="panel-block list-group-item is-primary">
-                  Assignment 4: Learning Deep Learning
+                  Assignment 4: Learning qDeep Learning
                 </div>
               </a>
             </div>

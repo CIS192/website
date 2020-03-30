@@ -102,7 +102,7 @@ Two things to appreciate here:
 
 ## Querying Model
 
-We are almost done the base of our restaurant website! The last thing we want to do is a a way to retrieve the meals in our database and query by specific fields. In our `menu/view.py` file create a new view function called `meals` that renders a template named `meals.html` (create this view and template based off of the earlier “Hello World” section). Link this view to the route `/meals` in `restaurant/urls.py`. This should render a static page at `/meals`.
+We are almost done with the base of our restaurant website! The last thing we want to do is a way to retrieve the meals in our database and query by specific fields. In our `menu/view.py` file create a new view function called `meals` that renders a template named `meals.html` (create this view and template based off of the earlier “Hello World” section). Link this view to the route `/meals` in `restaurant/urls.py`. This should render a static page at `/meals`. You may notice that if you declare the route as `path('meals', meals, name='meals')` instead of `	path('meals/', meals, name='meals')`, navigating to `/meals` will result in a 404 error. This is because Django automatically appends a `/` to requests in order normalize URLs. You can read about this decision decision [here](https://docs.djangoproject.com/en/3.0/misc/design-philosophies/#definitive-urls).
 
 We now want a way to programmatically retrieve all the meals and pass them through to the template to render them. We first import the meal class in `menu/views.py` using `from menu.models import Meal`. In our view function, before we call `render`, retrieve all the instances of this class using `meals = Meal.objects.all()`. If we print out `meals`, we should see a `QuerySet` of objects. This is just a fancy way for Django to serialize all of our objects in a Django-compatible way. We can simply iterate over this in Python using `for meal in meals` and printing their names using `print(meal.name)`. Finally, let’s pass this through to the template by adding it into the dictionary in the request call: `return render(request, "meals.html", {"meals": meals})`.
 
@@ -117,8 +117,15 @@ Finally, we can iterate over these objects in our template using a similar synta
 
 ## Conclusion
 
-In this lecture, we developed an application that uses a SQL database to store meals for a restaurant. These notions are the fundamentals behind any large scale web service from Dropbox to Facebook. In particular, Django does a lot of heavy lifting for us so we don’t need to implement certain complicated aspects of web development like SQL interactions and user accounts. In the next lecture, we will cover (non-admin) user accounts, more complex database querying and cloud deployment.
+In this lecture, we developed an application that uses a SQL database to store meals for a restaurant. These notions are the fundamentals behind any large scale web service from Dropbox to Facebook. In particular, Django does a lot of heavy lifting for us so we don’t need to implement certain complicated aspects of web development like SQL interactions and user accounts. In the next lecture, we will cover (non-admin) user accounts, more complex database querying and cloud deployment. As further reference, we strongly recommend taking a look at the excellent [Django documentation](https://docs.djangoproject.com/en/3.0/) if you'd like to learn more.
 
 ## Exercises
 
 Implement HW1 in Django using MySQL as a database (instead of the file system). This should take roughly 1 - 2 hours and will be good practice for HW2.
+
+---
+
+### References
+
+1. [URL Design - Django Documentation](https://docs.djangoproject.com/en/3.0/misc/design-philosophies/#definitive-urls)
+2. [Django Documentation](https://docs.djangoproject.com/en/3.0/)

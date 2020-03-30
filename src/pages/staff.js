@@ -16,7 +16,7 @@ const staff_list = [
     role: 'Teaching Assistant',
     bio:
       'Amit is a junior studying CIS and Business Analytics from Lexington, KY. He enjoys cooking, reading, and playing squash.',
-    hours: 'Wednesdays, 10:45 to 12:45 @ Levine 5th Floor',
+    hours: 'Wednesdays, 4:30 to 6:30 @ Levine 5th Floor',
   },
   {
     image: 'https://i.imgur.com/CvYs5et.jpg',

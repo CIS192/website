@@ -76,12 +76,16 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <div class="panel-block list-group-item is-primary">
-                Assignment 5: Markdown Blog
-              </div>
-              <div class="panel-block list-group-item is-primary">
-                Assignment 6: Twitter Clone
-              </div>
+              <a href="/markdown">
+                <div class="panel-block list-group-item is-primary">
+                  Assignment 5: Bringing Tumblr Back
+                </div>
+              </a>
+              <a href="/twitter">
+                <div class="panel-block list-group-item is-primary">
+                  Assignment 6: Twitter Version 192
+                </div>
+              </a>
             </div>
             <p>
               <strong>Final Project</strong>
@@ -90,15 +94,11 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <div class="panel-block list-group-item is-primary">
-                Milestone 1: Project Prosposal
-              </div>
-              <div class="panel-block list-group-item is-primary">
-                Milestone 2: Final Project Submission
-              </div>
-              <div class="panel-block list-group-item is-primary">
-                Milestone 3: Blog Post
-              </div>
+              <a href="/proposal">
+                <div class="panel-block list-group-item is-primary">
+                  Project Prosposal
+                </div>
+              </a>
             </div>
           </div>
           <div className="column"></div>

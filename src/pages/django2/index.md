@@ -15,7 +15,7 @@ These notes include the code (available on the course website) for you to replic
 
 ## Project Initialization
 
-We install Django through pip by using `pip install django`. Then, we can create a new Django project by running `django-admin startproject notes`. We can then `cd` into the folder and run `python manage.py runserver` to view a cute splash screen at `localhost:8000`, confirming our project works. Next, we can create an app named `core` that contains all the features for our app using `python manage.py startapp core`.
+We install Django through pip by using `pip install django`. This package will be installed locally on your computer. If you want to learn about virtual envrionments for python packages and dependencies, feel free to [learn more](https://tutorial.djangogirls.org/en/django_installation/#virtual-environment). Then, we can create a new Django project by running `django-admin startproject notes`. We can then `cd` into the folder and run `python manage.py runserver` to view a cute splash screen at `localhost:8000` on any browser, confirming our project works. Next, we can create an app named `core` that contains all the features for our app using `python manage.py startapp core`.
 
 The flat app architecture is sometimes favoured in the community and is used by organizations such as DoorDash. For educational purposes, it’s useful to simplify all the Django boilerplate this way. Let’s add this app to our `INSTALLED_APPS` in `notes/settings.py` by adding an element to the array named `'core'`.
 
@@ -34,7 +34,7 @@ Let’s first create a splash page for our restaurant. Create a folder named `te
 {% endfor %}
 ```
 
-Feel free to open up the file in your favourite web browser to see how the page looks. Next, let’s define a _view_ in `core/views.py`. Add the following code to `view.py`:
+Feel free to open up the file in your favourite web browser to see how the page looks. You should see the heading with the raw HTML code for now, including the curly brackets used for Django syntax. Next, let’s define a _view_ in `core/views.py`. Add the following code to `view.py` after the imports:
 
 ```python
 def splash(request):
@@ -50,7 +50,7 @@ urlpatterns = [
 ]
 ```
 
-Finally, if we open our browser to `localhost:8000`, we should see our splash page!
+Finally, if we open our browser to `localhost:8000`, we should see our splash page! For now, it will contain just the heading, since we do not have any notes in our database yet.
 
 ## Defining and Querying Notes
 
@@ -66,11 +66,11 @@ class Note(models.Model):
 
 The only particularly interesting thing model field about this `Note` model is the `ForeignKey` field. A _foreign key_ in a relational database is a link from one model (or **table**) to another. This structures the data in a relational way so that querying each note won’t just return an author id, but the author object itself. This is one of the benefits of using a relationship database: simple querying of multiple models that have relations.
 
-Note that this foreign key makes a reference to the predefined **User** object (which is what `createsuperuser` and the focus of this lecture). As suc,h we have to import it by adding `from django.contrib.auth.models import User` to the top of the models file.
+Note that this foreign key makes a reference to the predefined **User** object (which is what `createsuperuser` creates and the focus of this lecture). As such we have to import it by adding `from django.contrib.auth.models import User` to the top of the models file.
 
-In our views file, let’s query the `Note` model as before by importing the model using `from core.models import Note`. Then, let’s get all the instances in the `splash` view by using `Note.objects.all()`. We pass all the notes through to the view as usual.
+In our `core/views.py` file, let’s query the `Note` model as before by importing the model using `from core.models import Note`. Then, let’s get all the instances in the `splash` view by using `notes = Note.objects.all()` inside our splash function/view. We pass all the notes through to the view as usual: `return render(request, "splash.html", {"notes": notes})`.
 
-Add this model to our admin page in `admin.py` and create a superuser using `python manage.py createsuperuser`. Create a few notes at `localhost:8000/admin` and make sure they show up on our `splash` view for a quick sanity check.
+Add the `Note` model to our admin page in `admin.py`, register the `Note` model, and create a superuser using `python manage.py createsuperuser`. It will prompt your for username, email, and password. Now, login to the admin page and create a few notes at `localhost:8000/admin` and make sure they show up on our `splash` view for a quick sanity check.
 
 Our app is now in a similar state of functionality to our previous restaurant app. However, it would be nice to incorporate some sense of identity using accounts. In the following sections, we’ll extend this application to work with user input to create accounts and new notes.
 
@@ -99,7 +99,7 @@ if request.method == "POST":
     print(request.POST["title"], request.POST["body"])
 ```
 
-Now that we have the POST parameters, we can create a new note as following:
+Now that we have the POST parameters, we can create a new note as following (inside the if statement):
 
 ```python
 title = request.POST["title"]
@@ -136,7 +136,7 @@ We are finally able to accept user input to use Django’s robust authentication
 
 These are forms that will be used for creating new users and logging users in, respectively. The `placeholder` element is just to be nice to our users, telling them what each field is for. The actually important thing to notice the `name` attribute on each input as this is what serves as the key to index into the `request.POST` dictionary.
 
-Next, We’ll import the `authenticate` and `login` functions from Django with `from django.contrib.auth import authenticate, login`. Then we’ll create a view named `login_view` containing:
+Next, We’ll import the `authenticate` and `login` functions from Django with `from django.contrib.auth import authenticate, login` in `view.py`. Then we’ll create a view named `login_view` containing:
 
 ```python
 def login_view(request):
@@ -212,3 +212,7 @@ Now, we have a notes app that has complete accounts support! This is just a ston
 
 - The delete functionality is actually rather insecure with respect to accounts. How can we edit the delete view to make this functionality more secure?
 - What other behaviour for `on_delete` could we support?
+
+### References
+1. [Django Girls](https://tutorial.djangogirls.org/en/django_installation/)
+2. [Django Documentation](https://docs.djangoproject.com/en/3.0/)

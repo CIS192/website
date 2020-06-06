@@ -71,6 +71,10 @@ const lectures = [
 
 const guides = [
   {
+    topics: 'Useful Python Resources',
+    'notes': '/useful'
+  },
+  {
     topics: 'Unix Commands',
     notes: '/unix',
   },

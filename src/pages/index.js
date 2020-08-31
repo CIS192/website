@@ -22,7 +22,7 @@ const Index = () => {
               (Section 201)
             </p>
             <p>
-              <strong>Location: </strong> Tuesdays at 12:00 PM in Towne 303{' '}
+              <strong>Location: </strong> Remote!
             </p>{' '}
             <br />
             <p>

@@ -11,22 +11,6 @@ const staff_list = [
     hours: 'Tuesdays, 1:30 to 2:30 PM @ Weiss Tech House',
   },
   {
-    image: 'https://i.imgur.com/mP7wT9v.jpg',
-    name: 'Amit Lohe',
-    role: 'Teaching Assistant',
-    bio:
-      'Amit is a junior studying CIS and Business Analytics from Lexington, KY. He enjoys cooking, reading, and playing squash.',
-    hours: 'Wednesdays, 4:30 to 6:30 @ Levine 5th Floor',
-  },
-  {
-    image: 'https://i.imgur.com/CvYs5et.jpg',
-    name: 'Kevin Sun',
-    role: 'Teaching Assistant',
-    bio:
-      'Kevin is a sophomore from Cambridge, MA studying CIS and Statistics. He enjoys skiing and watching NBA.',
-    hours: 'Monday, 4:30 to 6:30 PM @ Rodin Mezzanine',
-  },
-  {
     image: 'https://danxtao.com/assets/headshot4-3.png',
     name: 'Daniel Tao',
     role: 'Teaching Assistant',
@@ -34,6 +18,13 @@ const staff_list = [
       'Daniel is a sophomore from Chicago, IL studying NETS. He likes rhythm games, reading, pranks, and meaningful comedy.',
     hours: 'Thursdays, 1:30 to 3:00 PM @ Weiss Tech House',
   },
+  {
+    image: 'https://i.imgur.com/bgp7xKH.jpg',
+    name: 'Jerry Lu',
+    role: 'Teaching Assistant',
+    bio: 'Jerry is a senior from Nashville, TN studing CIS and Cognitive Science. He likes rock climbing, cooking, and gardening.',
+    hours: 'Wednesdays, 2:00 to 4:00 PM'
+  }
 ];
 
 const Staff = () => {

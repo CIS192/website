@@ -156,7 +156,7 @@ No type definition necessary! Does this mean Python doesn't have any types? NO! 
 
 As you can imagine, `6 + 8` gives us an `int`. But the `print()` function actually takes a `string` as input. Here we have a good example of casting, where Python will actually do some nice type inferring for us, to make us do less work than in a language like Java (boo).
 
-We can define strings similary, such as:
+We can define strings similarly:
 
 ```python
 message = "hello world"
@@ -169,7 +169,7 @@ message = "hello world"
 message = "hello universe"
 ```
 
-without syntactic reprocussion.
+without syntactic repercussions.
 
 ### Casting
 
@@ -218,7 +218,7 @@ elif x < 4: print("x is less than 4")
 else: print("i guess x is exactly 4")
 ```
 
-Sometimes, doing this code compression is easier to read, and helps the reader see symmetry in the logic. However, this is usually a bad idea since it can make the code feel cluttered.
+Sometimes, this compressed code is easier to read and helps the reader see symmetry in the logic. However, this is usually a bad idea because it can make the code feel cluttered.
 
 ### While Loop
 
@@ -245,7 +245,7 @@ while True:
 
 ### For Loop
 
-If you noticed, the previous bit of code involved us essentially executing a [for loop](https://docs.python.org/3.7/tutorial/controlflow.html#for-statements), a special case of a while loop where we have an explicit update step and condition. An identical implementation of the previous counter would look like:
+You might have noticed that the previous bit of code is essentially executing a [for loop](https://docs.python.org/3.7/tutorial/controlflow.html#for-statements), a special case of a while loop where we have an explicit update step and condition. An identical implementation of the previous counter would look like:
 
 ```python
 for counter in range(10):

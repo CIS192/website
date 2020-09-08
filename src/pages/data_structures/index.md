@@ -337,7 +337,7 @@ How convenient!
 
 ## Dictionaries
 
-One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. Python's implementation of the hash table data structure is the [**dictionary**](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries). Furthermore, they're _even easier_ to instantiate and use in Python. Dictionaries are **mutable** data structures that take a [hashable](https://docs.python.org/3/glossary.html#term-hashable) object as a key and provide an arbitrary object as a value. This means immutable objects like numbers or strings can be used as keys, but not lists, dictionaries, or other mutable types.
+One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. Python's implementation of the hash table data structure is the [**dictionary**](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries). Furthermore, they're _even easier_ to instantiate and use in Python. Dictionaries are **mutable** data structures that take a [hashable](https://docs.python.org/3/glossary.html#term-hashable) object as a key and provide an arbitrary object as a value. This means immutable objects like numbers or strings can be used as keys, but not lists or dictionaries. Tuples are only hashable if their contents are hashable
 
 ### Dictionary Instantiation
 

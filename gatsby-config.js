@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'My Blog',
-    description: 'This is the blog of Arun',
+    title: 'CIS 192',
+    description: 'This is the website of CIS 192',
   },
   plugins: [
     {
@@ -115,5 +115,14 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //TODO: Replace tracking id
+        trackingId: 'TRACKING_ID_HERE',
+        anonymize: true,
+        respectDNT: true,
+      }
+    }
   ],
 };

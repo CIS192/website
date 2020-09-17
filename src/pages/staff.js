@@ -3,12 +3,12 @@ import Nav from '../components/Nav';
 
 const staff_list = [
   {
-    image: 'https://i.imgur.com/WXIJMsC.png',
+    image: 'https://avatars.githubusercontent.com/u/6424868',
     name: 'Arun Kirubarajan',
     role: 'Instructor',
     bio:
-      'Arun is a junior from Mississauga, Canada studying CIS and Cognitive Science. He likes skateboarding, making coffee, and making bad jokes.',
-    hours: 'Tuesdays, 1:30 to 2:30 PM @ Weiss Tech House',
+      'Arun is a junior from Mississauga, Canada studying CIS and Linguistics. He likes skateboarding, making coffee, and making bad jokes.',
+    hours: 'Mondays from 3:30 to 5:00 PM EST',
   },
   {
     image: 'https://danxtao.com/assets/headshot4-3.png',
@@ -16,14 +16,14 @@ const staff_list = [
     role: 'Teaching Assistant',
     bio:
       'Daniel is a sophomore from Chicago, IL studying NETS. He likes rhythm games, reading, pranks, and meaningful comedy.',
-    hours: 'Thursdays, 1:30 to 3:00 PM @ Weiss Tech House',
+    hours: 'Fridays from 2:00 to 4:00 PM EST',
   },
   {
     image: 'https://i.imgur.com/bgp7xKH.jpg',
     name: 'Jerry Lu',
     role: 'Teaching Assistant',
     bio: 'Jerry is a senior from Nashville, TN studing CIS and Cognitive Science. He likes rock climbing, cooking, and gardening.',
-    hours: 'Wednesdays, 2:00 to 4:00 PM'
+    hours: 'Wednesdays from 2:00 to 4:00 PM EST'
   }
 ];
 

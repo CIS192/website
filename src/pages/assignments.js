@@ -33,7 +33,7 @@ const Teaching = () => {
                 <div
                   class="panel-block list-group-item is-primary"
                 >
-                  Assignment 1: Finger Workouts
+                  Assignment 0: Finger Workouts
                 </div>
               </a>
               <a 
@@ -42,7 +42,7 @@ const Teaching = () => {
               <div
                 class="panel-block list-group-item is-primary"
               >
-                Assignment 2: Data Structures and Algorithms
+                Assignment 1: Data Structures and Algorithms
               </div>
             </a>
             </div>
@@ -57,7 +57,7 @@ const Teaching = () => {
                 <div
                   class="panel-block list-group-item is-primary"
                 >
-                  Assignment 3: Learning Machine Learning
+                  Assignment 2: Learning Machine Learning
                 </div>
               </a>
               <a 
@@ -65,7 +65,7 @@ const Teaching = () => {
                 download
               >
                 <div class="panel-block list-group-item is-primary">
-                  Assignment 4: Deeper Learning
+                  Assignment 3: Deeper Learning
                 </div>
               </a>
             </div>
@@ -78,12 +78,12 @@ const Teaching = () => {
             >
               <a href="/markdown">
                 <div class="panel-block list-group-item is-primary">
-                  Assignment 5: Bringing Tumblr Back
+                  Assignment 4: Bringing Tumblr Back
                 </div>
               </a>
               <a href="/twitter">
                 <div class="panel-block list-group-item is-primary">
-                  Assignment 6: Twitter Version 192
+                  Assignment 5: Twitter Version 192
                 </div>
               </a>
             </div>

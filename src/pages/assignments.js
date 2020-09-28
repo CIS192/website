@@ -27,7 +27,7 @@ const Teaching = () => {
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
               <a 
-                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py"
+                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment0.py"
                 download
               >
                 <div
@@ -37,7 +37,7 @@ const Teaching = () => {
                 </div>
               </a>
               <a 
-                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment2.py"
+                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py"
                 download>
               <div
                 class="panel-block list-group-item is-primary"
@@ -53,7 +53,7 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <a href="/assignments/3">
+              <a href="/assignments/2">
                 <div
                   class="panel-block list-group-item is-primary"
                 >
@@ -61,7 +61,7 @@ const Teaching = () => {
                 </div>
               </a>
               <a 
-                href="https://kirubarajan.nyc3.digitaloceanspaces.com/spring2020/deep_learning.ipynb"
+                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment3.md"
                 download
               >
                 <div class="panel-block list-group-item is-primary">

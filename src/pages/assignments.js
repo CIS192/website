@@ -26,8 +26,8 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <a 
-                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py"
+              <a
+                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment0.py"
                 download
               >
                 <div
@@ -36,15 +36,15 @@ const Teaching = () => {
                   Assignment 0: Finger Workouts
                 </div>
               </a>
-              <a 
-                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment2.py"
+              <a
+                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py"
                 download>
-              <div
-                class="panel-block list-group-item is-primary"
-              >
-                Assignment 1: Data Structures and Algorithms
+                <div
+                  class="panel-block list-group-item is-primary"
+                >
+                  Assignment 1: Data Structures and Algorithms
               </div>
-            </a>
+              </a>
             </div>
             <p>
               <strong>Data Science</strong>
@@ -60,7 +60,7 @@ const Teaching = () => {
                   Assignment 2: Learning Machine Learning
                 </div>
               </a>
-              <a 
+              <a
                 href="https://kirubarajan.nyc3.digitaloceanspaces.com/spring2020/deep_learning.ipynb"
                 download
               >

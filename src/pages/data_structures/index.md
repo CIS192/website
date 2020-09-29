@@ -84,7 +84,7 @@ The shorthand for this is `set1 & set2`, which makes sense if you think of inter
 
 How do we get a specific element from a set? Turns out, we can't. This is a limitation in the _API_ of sets; they're mainly used as a means of checking existence of certain objects. Let's move onto data structures that we can index into, thus preserving some notion of _order_. Recall a [tuple](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) from CIS 120 as being an **immutable** sequence of elements.
 
-### Instantiation
+### Tuple Instantiation
 
 In Python, we can declare a tuple by using regular brackets:
 
@@ -165,7 +165,7 @@ three_ones = (1) * 3
 
 What if we wanted the indexing power of a tuple, but in the form of a _mutable_ data structure, one that allows us to change the contents inside. Suprise suprise - we've arrived back at the array! In Python, these are lovingly known as **lists**. [Lists](https://docs.python.org/3.7/tutorial/introduction.html#lists) are completely mutable objects that can contain _any_ arbitrary datatype. This means that we can have a list containing strings, integers, and custom Koala objects,
 
-### Instantiation
+### List Instantiation
 
 List declaration is extremely simple in Python. Similar to sets, we can either instantiate them by calling `list()` or by writing out the contents within a `[]`:
 
@@ -337,11 +337,11 @@ How convenient!
 
 ## Dictionaries
 
-One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. In Python, these data structures are known as [**dictionaries**](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries). Furthermore, they're _even easier_ to instantiate and use in Python. Dictionaries are **mutable** data structures that can take an arbitrary object as a key, and provide an arbitrary object as a value.
+One of the most common paradigms for storing information is in the form of a key-value pair. In CIS 120 and 121, we learned about HashMaps, which allow us to perform lookup, insertion/deletion and retrieval in $O(1)$ time. Python's implementation of the hash table data structure is the [**dictionary**](https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries). Furthermore, they're _even easier_ to instantiate and use in Python. Dictionaries are **mutable** data structures that take a [hashable](https://docs.python.org/3/glossary.html#term-hashable) object as a key and provide an arbitrary object as a value. This means immutable objects like numbers or strings can be used as keys, but not lists or dictionaries. Tuples are only hashable if their contents are hashable
 
-### Instantiation
+### Dictionary Instantiation
 
-We can create a dictionary by either calling `dict()` or by writing out its contents within curly braces `{}`:
+We can create a dictionary by either calling `dict()` or by writing out its contents within curly braces `{}` with comma separated `key: value` pairs:
 
 ```python
 scores = dict()

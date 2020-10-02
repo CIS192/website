@@ -3,7 +3,7 @@ import Nav from '../components/Nav';
 
 const staff_list = [
   {
-    image: 'https://avatars2.githubusercontent.com/u/6424868?s=400&u=481199032fa2426a9c4bb60dcb937966cd8c3ce0&v=4',
+    image: 'https://avatars.githubusercontent.com/u/6424868',
     name: 'Arun Kirubarajan',
     role: 'Instructor',
     bio:
@@ -16,7 +16,7 @@ const staff_list = [
     role: 'Teaching Assistant',
     bio:
       'Daniel is a sophomore from Chicago, IL studying NETS. He likes rhythm games, reading, pranks, and meaningful comedy.',
-    hours: 'Thursdays from 1:30 to 3:00 PM EST',
+    hours: 'Fridays from 2:00 to 4:00 PM EST',
   },
   {
     image: 'https://i.imgur.com/bgp7xKH.jpg',

@@ -118,8 +118,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //TODO: Replace tracking id
-        trackingId: 'TRACKING_ID_HERE',
+        trackingId: process.env.GA_TRACKING_ID,
         anonymize: true,
         respectDNT: true,
       }

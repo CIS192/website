@@ -6,7 +6,7 @@ path: '/pythonic'
 
 > The "Python" Way of Doing Things
 
-In this lecture, we'll be tackling a variety of Python constructs that are exclusive to the language. A variety of the examples shown today might feel a little contrived, but we'll see later in the course that each and every module shown in this lecture will either be strictly necessary for certain functionality or is just incredibly awesome syntactic sugar.
+In this lecture, we'll be tackling a variety of Python constructs that are exclusive to the language. A variety of the examples shown today might feel a little contrived, but we'll see later in the course that each and every module shown in this lecture will be either necessary for certain functionality, or just incredibly awesome syntactic sugar.
 
 ## Objects
 
@@ -54,7 +54,7 @@ But what does `.__init__()` actually do?
 
 ### Magic Methods
 
-We know [`__init__()`](https://docs.python.org/3.7/reference/datamodel.html#object.__init__) as something like a constructor. But it turns out, there are a varitey of other core object functionalities that can be implemented (or overrided). For example, you've seen getting the length of a list using `len()` is actually implemented on the list object using [`__len__()`](https://docs.python.org/3.7/reference/datamodel.html#object.__len__). There are actually a variety of ther magic methods that can be used:
+We know [`__init__()`](https://docs.python.org/3.7/reference/datamodel.html#object.__init__) as something like a constructor. But there are a varitey of other core object functionalities that can be implemented (or overridden). For example, getting the length of a list using `len()` is actually implemented on the list object using [`__len__()`](https://docs.python.org/3.7/reference/datamodel.html#object.__len__). There are a variety of ther magic methods that can be used:
 
 ```python
 class Sloth(Animal):
@@ -109,7 +109,7 @@ li1[0] = 5
 print(li1[0], li2[0])
 ```
 
-Notice that editing the . But this copying doesn't always work so cleanly. Imagine if we had _more objects_ as fields in the copied object. This naive copying wouldn't update the references on those objects. To fix this, we need to use the `deepcopy` package, which recursively copies objects and fields:
+Notice that editing `li1` does not change `li2`. But copying objects like this doesn't always work so cleanly. Imagine if we had _more objects_ as fields in the copied object. This naive copying wouldn't update the references on those nested objects. To fix this, we need to use the `deepcopy` package, which recursively copies objects and fields:
 
 ```python
 from copy import deepcopy
@@ -133,13 +133,13 @@ def add_two(x, y):
     return x + y
 ```
 
-Something that's even more interesting about function is the use of _positional arguments_ and _keyword arguments_.
+Something that's even more interesting about functions is the use of _positional arguments_ and _keyword arguments_.
 
 ### Positional Arguments and Args
 
-Sometimes, we might choose to be less explicit with our function signatures, and as a result we can define even looser function signatures. In particular, we can use the single asterisk `*` before a function argument to allow for a variable amount of inputs. Let's refactor our `add_two` function into `def add(*args)`.
+Sometimes, we might choose to be less explicit with our function signatures. Specifically, we can use the single asterisk `*` before a function argument to allow for a variable amount of inputs. Let's refactor our `add_two` function into `def add(*args)`.
 
-In our function definition the multiple parameters is represented as a list:
+In our function definition, the multiple parameters are represented as a list:
 
 ```python
 def add(*args):
@@ -202,9 +202,9 @@ old_list = [1, 2, 3, 4, 5]
 new_list = [x ** 2 for x in old_list]
 ```
 
-And we're done! Wasn't that simple? The general formula for a _list comprehension_ is
+And we're done! The general formula for a _list comprehension_ is:
 
-```
+```python
 (expression) for (value) in (list) (if condition)
 ```
 
@@ -227,11 +227,11 @@ name_lengths = {name: len(name) for name in names}
 formatted_names = {name[0].upper() + name[1:].lower() for name in names}
 ```
 
-As a general hint, whenever we want you to implement functions in a single line, we're usually wanting you to think about some kind of comprehension.
+As a hint, whenever we want you to implement functions in a single line, we generally want you to think about some kind of comprehension.
 
 ## Iterators
 
-So how do for loops and list comprehensions work so seemlessly? And what kinds of objects can we iterate over? Turns out, whatever implements the magic methods of `__next__` and `__iter__`. So something that looks like this:
+So how do for loops and list comprehensions work so seamlessly? And what kinds of objects can we iterate over? Turns out, any object that implements the magic methods `__next__` and `__iter__`. So something that looks like this:
 
 ```python
 li = list()
@@ -240,7 +240,7 @@ for item in li:
 print("complete")
 ```
 
-actually looks something like this:
+actually looks like this:
 
 ```python
 li = list()
@@ -276,7 +276,7 @@ for i in range(10):
 
 ## Generators
 
-Let's talk about some more function behaviour. We're used to functions that return a single value, and terminate their execution upon returning. In Python, we can extend this idea of returning a value to [_generators_](https://docs.python.org/3.7/tutorial/classes.html#generators). Generators are functions that `yield` a value, and do not terminate upon doing so. As a result, we can delare functions that act as iterators.
+Let's talk about some more function behaviour. We're used to functions that return a single value and terminate their execution upon returning. In Python, we can extend this idea of returning a value to [_generators_](https://docs.python.org/3.7/tutorial/classes.html#generators). Generators are functions that `yield` a value, and do not terminate upon doing so. As a result, we can declare functions that act as iterators.
 
 ```python
 def simple_yields():
@@ -310,7 +310,7 @@ for number in generator:
     print(number)
 ```
 
-Note that when calling `count(end=20)`, we are returned the generator itself and we can then iterate over the outputs. Between `yield` statements, the execution of the function is essentially stopped until the caller makes another call.
+Note that when calling `count(end=20)`, we are returned the generator itself and we can then iterate over the outputs of the generator. Between `yield` statements, the execution of the function is essentially stopped until the caller makes another call.
 
 We can even define generators in terms of other iterators:
 
@@ -320,7 +320,7 @@ def square_generator(n):
         yield i ** 2
 ```
 
-I hope this resolves some behind the scenes intuition on for-loops!
+I hope this helps you understand how for-loops work behind the scenes!
 
 ## Lambda Functions
 
@@ -350,7 +350,7 @@ names = ["Arun", "Saif", "Kevin"]
 sorted_names = sorted(names, key=lambda x: len(x))
 ```
 
-Let's disect this. The `key` parameter tells the `sorted` function what value to sort off of. So, when we pass a lambda function that returns the length of the values, we get exactly what we want for the algorithm to sort based off length.
+Let's disect this. The `key` parameter tells the `sorted` function what value to use for comparing elements. So, when we pass a lambda function that returns the length of the values, we get the algorithm to sort based off of length.
 
 We can also implement some classical functional programming ideas on lists such as `map` (which is sort of like a comprehension) and `filter` (which filters elements according to some function):
 
@@ -382,7 +382,7 @@ def check(function):
 wrapped = check(do_something)
 ```
 
-Here, we've defined a function that executes some code that checks some conditions before a given function is executed, and returns the function to be executed. This construct is pretty standard when for example, we wanted to check if a user has the necessary permissions to perform some action. Notice we get a function returned back, with all the conditions met.
+Here, we've defined a function that executes some code that checks some conditions before a given function is executed, and returns the function to be executed. This construct is useful, for example, if we wanted to check if a user has the necessary permissions to perform some action. Notice we get a function returned back, with all the conditions met.
 
 In Python, we have shorthand syntax to perform this by _decorating_ the function:
 
@@ -392,7 +392,7 @@ def do_something():
     print("doing something")
 ```
 
-It's easy to see how powerful decorators are when we see them in action. We're gonna leave it at here for now, and we'll return to decorators when we use the Flask web development framework, where their use will be more apparent.
+It's easy to see how powerful decorators are when we see them in action. We're gonna leave it at here for now, and we'll return to decorators when we learn about the Flask web development framework, where their use will be more apparent.
 
 ---
 

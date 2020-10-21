@@ -8,7 +8,7 @@ In our third assignment, we will be exploring the field of computational linguis
 
 ## Part 0: Setup
 
-Skim through the assignment and install the relevant packages for this assignment through pip (e.g. [Sci-Kit Learn](https://github.com/scikit-learn/scikit-learn) and [NumPy](https://github.com/numpy/numpy)). Next, download the homework datasets [here](https://github.com/CIS192/homework/raw/master/assignment3/data.zip) (or from the GitHub repository). Finally, download the skeleton code, as well as the report template from the [assignment's GitHub repository](https://github.com/CIS192/homework/tree/master/assignment3).
+Skim through the assignment and install the relevant packages for this assignment through pip (e.g. [Sci-Kit Learn](https://github.com/scikit-learn/scikit-learn) and [NumPy](https://github.com/numpy/numpy)). Next, download the homework datasets [here](https://github.com/CIS192/homework/raw/master/assignment2/data.zip) (or from the GitHub repository). Finally, download the skeleton code, as well as the report template from the [assignment's GitHub repository](https://github.com/CIS192/homework/tree/master/assignment2).
 
 ## Part 1: NLP Basics
 

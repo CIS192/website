@@ -60,10 +60,8 @@ const Teaching = () => {
                   Assignment 2: Learning Machine Learning
                 </div>
               </a>
-              <a 
-                href="https://raw.githubusercontent.com/CIS192/homework/master/assignment3.md"
-                download
-              >
+
+              <a href="/assignments/3">
                 <div class="panel-block list-group-item is-primary">
                   Assignment 3: Deeper Learning
                 </div>

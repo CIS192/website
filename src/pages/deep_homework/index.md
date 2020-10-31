@@ -4,13 +4,13 @@ path: /assignments/3
 
 # Assignment 3: Learning Machine Learning
 
-> Due Nov 10 at 11:59 PM on Gradescope
+> Due November 10th at 11:59 PM EST.
 
 ## Preface
 
 In this assignment, we will be taking a deep dive into machine learning. This is NOT a machine learning class, so very little math is expected in this assignment, however thinking about the questions mathematically and exercising proper debugging will help.
 
-This assignment can be completed in an IPython notebook. The starting code is available in a notebook [here](https://raw.githubusercontent.com/CIS192/homework/master/assignment3.ipynb). Feel free to use Google Colab or your own machine. Be warned that the second part of this assignment involves neural network training, which is computationally expensive and may take a long time on a laptop.
+This assignment can be completed in an IPython notebook. The starting code is available in a notebook <a href="https://raw.githubusercontent.com/CIS192/homework/master/assignment3.ipynb" download>to download here</a> (you might need to right-click and "Save As"). Feel free to use Google Colab or your own machine. Be warned that the second part of this assignment involves neural network training, which is computationally expensive and may take a long time on a laptop.
 
 This assignment will be graded by the staff, so make sure to comment your code and document design considerations. You are allowed to use external libraries if you wish (e.g. `math` or `numpy`) but obviously implementations must be done yourself without importing from libraries like Sci-Kit Learn.
 
@@ -22,11 +22,11 @@ In this section, we will be optimizing the parameters for neural network trainin
 
 For some inspiration, consider changing these hyperparameters:
 
-- `batch_size` – smaller batch size = more parameter updates
-- `Dropout(p)` – randomly sets weights to 0 with probability `p` to prevent overfitting
-- `optimizer` – change from `SGD` (stochastic gradient descent) to `Adadelta` or another optimizer [here](https://keras.io/optimizers/)
-- `lr` – larger learning rate = larger step per instance, less granularity
-- `epochs` – more training batches/passes through the data
+1. `batch_size` – smaller batch size = more parameter updates
+2. `Dropout(p)` – randomly sets weights to 0 with probability `p` to prevent overfitting
+3. `optimizer` – change from `SGD` (stochastic gradient descent) to `Adadelta` or another optimizer [here](https://keras.io/optimizers/)
+4. `lr` – larger learning rate = larger step per instance, less granularity
+5. `epochs` – more training batches/passes through the data
 
 There is a lot of nomenclature involved, so you should consult the [Keras documentation](https://keras.io/api/) or other external resources and ask questions on Piazza. Feel free to make architecture changes (e.g. `model.add()` new layers) if you’re feeling adventurous! However, just changing the hyperparameters (with explanation) is sufficient for full credit.
 

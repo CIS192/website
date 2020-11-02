@@ -3,12 +3,12 @@ import Nav from '../components/Nav';
 
 const staff_list = [
   {
-    image: 'https://avatars.githubusercontent.com/u/6424868',
+    image: 'https://i.imgur.com/Trv8Amg.png',
     name: 'Arun Kirubarajan',
     role: 'Instructor',
     bio:
       'Arun is a junior from Mississauga, Canada studying CIS and Linguistics. He likes skateboarding, making coffee, and making bad jokes.',
-    hours: 'Mondays from 3:30 to 5:00 PM EST',
+    hours: 'Mondays from 3:30 to 4:30 PM EST',
   },
   {
     image: 'https://danxtao.com/assets/headshot4-3.png',

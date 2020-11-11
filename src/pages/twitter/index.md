@@ -2,8 +2,8 @@
 path: /twitter
 ---
 
-# Assignment 6: Twitter Version 192
-> Due Tuesday, April 13th at 11:59 PM. 
+# Assignment 5: Twitter Version 192
+> Due December 1st at 11:59 PM. Start early and make use of office hours!
 
 ## Introduction
 The beauty of web development is its ability to create software that anybody with an internet connection can use. In this assignment, you will implement a clone of my favourite social media - Twitter! An implementation of the website is available [here](https://twitter.kirubarajan.com) and you are expected to recreate all the functionality from the site. This might seem a little daunting - but I assure you that everything you need to know has been covered in lecture.

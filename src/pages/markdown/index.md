@@ -13,13 +13,13 @@ For the HTML sections of this assignment, feel free to refer to Piazza, the shar
 ## Project Layout
 Feel free to write all the functionality into a single app within your project. You will design a database model to store blog posts. You must include at least 5 fields in the model for your posts (the specifics of which are up to you). Think about how the information stored in actual blogs for inspiration!
 
-### Splash Page
+## Splash Page
 The splash page is the entry point to your blog, feel free to spice it up! This page should be accessible at the empty route `/` and should have a short blurb about yourself, as well as an image using a `img` tag (feel free to use image hosting such as imgur.com to make your life easier). 
 
-### Post Page
+## Post Page
 The post page renders markdown into HTML for a given blog post. This page should be accessible at the route `/post/<id>`, where `<id>` is the unique identifier for a blog post. For example, `/post/helloworld` should render the blog post pertaining to `helloworld`.
 
-#### Sub Routes
+### Sub Routes
 Retrieving the sub-route for a given route can be specified as follows in the `urls.py` file: 
 
 ```python
@@ -40,7 +40,7 @@ object = Model.objects.get(field=value)
 
 This should be enough logic to get started!
 
-#### Rendering Markdown
+### Rendering Markdown
 An example markdown post would be something like:
 
 ```md

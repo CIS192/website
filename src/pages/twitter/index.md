@@ -10,7 +10,8 @@ The beauty of web development is its ability to create software that anybody wit
 
 In particular, you must be able to sign in and create tweets that support hashtagging (i.e. the tweet “I love #programming in #cis192” contains two hashtags) such that accessing the page for a given hashtag will return the tweets that contain the hashtag. In addition, you must be able to delete tweets (if you are signed in as the author). You also need to create profile pages for each user that display their username and the tweets they wrote (all tweets must be displayed in order of recency). For this assignment, all tweets will be public (in essence, all users follow each other by default).
 
-This assignment is meant to be developed from scratch, including importing packages from the `pip` registry. Feel free to consult the Django boilerplate code provided in lecture. Collaboration with one other student is permitted but all students must submit their own assignment.
+This assignment is meant to be developed from scratch, including importing packages from the `pip` registry. Feel free to consult the Django boilerplate code provided in lecture.
+
 
 ## Milestone 1: Templates
 The recommended approach to developing this application is to start by writing the HTML templates that the application requires. At the very minimum the application requires the following pages:

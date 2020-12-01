@@ -92,9 +92,9 @@ const Teaching = () => {
               class="panel list-group"
               style={{ marginTop: '1rem', borderRadius: '0.2rem' }}
             >
-              <a href="/proposal">
+              <a href="/final">
                 <div class="panel-block list-group-item is-primary">
-                  Project Prosposal
+                  Final Project
                 </div>
               </a>
             </div>

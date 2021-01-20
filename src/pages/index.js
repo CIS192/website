@@ -15,7 +15,7 @@ const Index = () => {
                 🐍
               </span>
             </h1>
-            <h1 className="subtitle">Fall 2020</h1>
+            <h1 className="subtitle">Spring 2021</h1>
             <p>
               <strong>Instructor: </strong>{' '}
               <a href="https://kirubarajan.github.io">Arun Kirubarajan</a>{' '}

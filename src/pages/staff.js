@@ -26,7 +26,7 @@ const staff_list = [
     hours: 'Wednesdays from 1:00 to 3:00 PM EST'
   },
   {
-    image: 'https://i.imgur.com/X7WLUKI.jpg',
+    image: 'https://i.imgur.com/FcMG7vp.jpg',
     name: 'Grace Jiang',
     role: 'Teaching Assistant',
     bio: 'Grace is a junior from Fremont, CA studying CIS and business analytics. Her current interests are Korean indie music and League of Legends.',

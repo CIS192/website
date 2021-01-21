@@ -30,7 +30,7 @@ const staff_list = [
     name: 'Grace Jiang',
     role: 'Teaching Assistant',
     bio: 'Grace is a junior from Fremont, CA studying CIS and business analytics. Her current interests are Korean indie music and League of Legends.',
-    hours: 'Sundays from 6:00 to 9:00 PM EST'
+    hours: 'Sundays from 6:00 to 8:00 PM EST'
   }
 ];
 

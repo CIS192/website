@@ -8,7 +8,7 @@ const lectures = [
     topics: 'Python Basics',
     notes: '/basics',
     hw: 'HW0',
-    hw_link: 'https://raw.githubusercontent.com/CIS192/homework/master/assignment1.py'
+    hw_link: 'https://raw.githubusercontent.com/CIS192/homework/master/assignment0.py'
   },
   {
     week: 1,

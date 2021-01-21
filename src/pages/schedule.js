@@ -85,14 +85,14 @@ const lectures = [
     date: '4/07',
     topics: 'Lightning Lectures [TBD]',
     notes: '/lightning',
+    hw: 'Final Project',
+    hw_link: '/final'
   },
   {
     week: 12,
     date: '4/21',
     topics: 'Course Wrap-Up',
     notes: '/final',
-    hw: 'Final Project',
-    hw_link: '/final'
   },
 ];
 
@@ -133,14 +133,11 @@ const Teaching = () => {
             </h1>
             <p>
               Each lecture has its associated readings listed under the link to
-              the lecture material. Schedule is subject to change throughout the
+              the lecture material. Assignments and their scheduling is subject to change throughout the
               semester.
               <br /> <br />
               This class is split into three sections: Pythonic Foundations,
               Data Science, and Web Development.
-
-              <br /><br />
-              Homework due dates are subject to change
             </p>{' '}
             <br />
             <table class="table is-bordered is-fullwidth">

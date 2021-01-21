@@ -7,8 +7,15 @@ const staff_list = [
     name: 'Arun Kirubarajan',
     role: 'Instructor',
     bio:
-      'Arun is a junior from Mississauga, Canada studying CIS and Linguistics. He likes skateboarding, brewing coffee, and making bad jokes.',
-    hours: 'Mondays from 12:00 PM to 1:30 PM EST',
+      'Arun is a senior from Mississauga, Canada studying CIS and Linguistics. He likes skateboarding, brewing coffee, and making bad jokes.',
+    hours: 'Mondays, 12:00 PM to 1:30 PM EST',
+  },
+  {
+    image: 'https://i.imgur.com/bgp7xKH.jpg',
+    name: 'Jerry Lu',
+    role: 'Head TA',
+    bio: 'Jerry is a senior from Nashville, TN studing CIS and Cognitive Science. He likes rock climbing, cooking, and gardening.',
+    hours: 'Wednesdays, 1:00 to 3:00 PM EST'
   },
   {
     image: 'https://danxtao.com/assets/headshot4-3.png',
@@ -16,21 +23,14 @@ const staff_list = [
     role: 'Teaching Assistant',
     bio:
       'Daniel is a junior from Chicago, IL studying NETS. He likes rhythm games, reading, pranks, and meaningful comedy.',
-    hours: 'Fridays from 1:00 to 3:00 PM EST',
-  },
-  {
-    image: 'https://i.imgur.com/bgp7xKH.jpg',
-    name: 'Jerry Lu',
-    role: 'Teaching Assistant',
-    bio: 'Jerry is a senior from Nashville, TN studing CIS and Cognitive Science. He likes rock climbing, cooking, and gardening.',
-    hours: 'Wednesdays from 1:00 to 3:00 PM EST'
+    hours: 'Fridays, 1:00 to 3:00 PM EST',
   },
   {
     image: 'https://i.imgur.com/FcMG7vp.jpg',
     name: 'Grace Jiang',
     role: 'Teaching Assistant',
     bio: 'Grace is a junior from Fremont, CA studying CIS and business analytics. Her current interests are Korean indie music and League of Legends.',
-    hours: 'Sundays from 6:00 to 8:00 PM EST'
+    hours: 'Sundays, 6:00 to 8:00 PM EST'
   }
 ];
 
@@ -58,7 +58,7 @@ const Staff = () => {
       <div className="container">
         <div class="columns is-multiline">
           {staff_list.map(({ image, name, role, bio, hours }) => (
-            <div class="column is-one-fourth">
+            <div class="column is-one-quarter">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">

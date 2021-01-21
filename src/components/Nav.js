@@ -13,9 +13,9 @@ const Nav = () => {
             Syllabus{' '}
           </span>{' '}
         </a>
-        <a href="/lectures">
+        <a href="/schedule">
           {' '}
-          <span className="tag is-light"> Lectures </span>{' '}
+          <span className="tag is-light"> Schedule </span>{' '}
         </a>
         <a href="/assignments">
           {' '}

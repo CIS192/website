@@ -57,14 +57,14 @@ const lectures = [
     date: '3/10',
     topics: 'REST APIs with Flask',
     notes: '/flask',
-    hw: 'HW4',
-    hw_link: '/markdown'
   },
   {
     week: 8,
     date: '3/17',
     topics: 'Full Stack Development with Django',
     notes: '/django1',
+    hw: 'HW4',
+    hw_link: '/markdown'
   },
   {
     week: 9,
@@ -79,8 +79,6 @@ const lectures = [
     date: '3/31',
     topics: 'Cloud Computing with Docker',
     notes: '/docker',
-    hw: 'Final Project',
-    hw_link: '/final'
   },
   {
     week: 11,
@@ -93,6 +91,8 @@ const lectures = [
     date: '4/21',
     topics: 'Course Wrap-Up',
     notes: '/final',
+    hw: 'Final Project',
+    hw_link: '/final'
   },
 ];
 

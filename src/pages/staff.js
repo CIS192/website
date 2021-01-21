@@ -16,7 +16,7 @@ const staff_list = [
     role: 'Teaching Assistant',
     bio:
       'Daniel is a junior from Chicago, IL studying NETS. He likes rhythm games, reading, pranks, and meaningful comedy.',
-    hours: 'TBD',
+    hours: 'Fridays from 1:00 to 3:00 PM EST',
   },
   {
     image: 'https://i.imgur.com/bgp7xKH.jpg',

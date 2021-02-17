@@ -4,114 +4,152 @@ path: '/assignments/2'
 
 # Assignment 2: Learning Machine Learning
 
-In our third assignment, we will be exploring the field of computational linguistics, otherwise known as **Natural Language Processing**. The goal of this assignment is to have you become familiar with working with reading/writing to files, and working with third party packages. We'll explore these Python ideas through the lens of Data Science and Machine Learning.
+In this assignment, we will be exploring data science, and building our first machine learning model from scratch! Make sure to install dependencies with `pip install numpy pandas` as we'll be using them for the assignment. In addition, make sure to keep your data files in the same directory as your `assignment2.py` ([available here](https://raw.githubusercontent.com/CIS192/homework/master/assignment2/assignment2.py)) to keep things simple.
 
-## Part 0: Setup
+## Part 1: Data Wrangling with Pandas
 
-Skim through the assignment and install the relevant packages for this assignment through pip (e.g. [Sci-Kit Learn](https://github.com/scikit-learn/scikit-learn) and [NumPy](https://github.com/numpy/numpy)). Next, download the homework datasets [here](https://github.com/CIS192/homework/raw/master/assignment2/data.zip) (or from the GitHub repository). Finally, download the skeleton code, as well as the report template from the [assignment's GitHub repository](https://github.com/CIS192/homework/tree/master/assignment2).
+### Section 0: Pandas Pandas Pandas Pandas (x4)
 
-## Part 1: NLP Basics
+One of Python's biggest assets is its ability to let us do data analysis quickly and effortlessly, in a reproducible way. Since data analysis is a prevalent part of any field in both academia, and industry, it's worth having good data skills in your toolbelt.
 
-For the first part of the homework you will be implementing a couple of basic NLP tasks in `part1.py`, including raw text analysis with CSV, text tokenizing, and word importance with a score called TF-IDF. The data file `raven.txt` is located in the `data.zip` file, so make sure to unzip it to `/data`! The remaining dataset files will be used for Part 2, so be sure to keep those handy.
+The best way to do quick data analysis in Python is to use [Pandas](https://pandas.pydata.org), an open source data analysis library used by virtually every data scientist. In particular, we will be looking at a dataset of [different types of wines](https://archive.ics.uci.edu/ml/datasets/wine) and their chemical makeup. Cheers!
 
-**TODO:** Implement the incomplete stubs in `part1.py`.
-
-## Part 2: Classification with Sci-Kit Learn
-
-> Adapted from CIS 530 - Computational Linguistics
-
-### Preamble
-
-The second part of the homework will be a longer project: building a text classifier. Now that we have seen tokenizing, text cleaning, and word importance with TF-IDF, let's train a text classifier that will be able to classify a word as being simple (e.g. _easy_, _act_, _blue_) or complex (e.g. _ostentatious_, _esoteric_, _aberration_). This is an important step in a larger NLP task to simply texts to make text more readable.
-
-In the provided code template with provided helper and unimplemented functions, you will need to:
-
-0. Look at the dataset! Try to understand the information that is conveyed to better understand the task.
-1. Implement the machine learning evaluation metric we discussed in class (accuracy).
-1. Perform data pre-processing for our dataset. You will need to parse the provided pre-labeled data in training/test sets, and implement a simple baseline model.
-1. Use the Sci-Kit Learn package to train machine learning models which classif
-   y words as simple or complex.
-
-We have provided the dataset of labelled words split between training/test sets in (.txt) format. Some notes on the dataset:
-
-1. The training set is disjoint, so a word in `complex_words_training.txt` will not appear in the test set.
-2. Stop-words and proper nouns are already removed, leaving only nouns, verbs, and adjectives.
-3. There are 4,000 training words, and 1,000 testing words.
-4. The relevant columns are WORD (the word to be classified), and LABEL (0 for simple, 1 for complex).
-
-We have also provided frequencies (a contiguous sequence of 1 item from a given sample of text or speech) from the [Google N-Gram Corpus](https://books.google.com/ngrams/info). This is to provide you another feature for classification. Consider why this extra information is useful for distinguishing between simple and complex words.
-
-Be sure to install `numpy` and `sklearn` before starting.
-
-### Section 0: Data (0 points)
-
-We have provided the function `load_file` that takes in the file name `data_file` of one of the datasets and returns the words and labels of that dataset. The second provided helper function `load_ngram_counts` loads Google N-Gram counts from our provided file `ngram_counts.txt` as a dictionary of word frequencies.
-
-**TODO:** Inspect these functions, print out what they return and make sure you understand what they're providing before moving on.
-
-### Section 1: Evaluation (5 points)
-
-We will be implementing **accuracy**, a standard evaluation metric that we discussed in class. We will use this function later in the assignment, so be sure that this function works before moving on.
-
-**TODO:** Implement `get_accuracy`, which should return a value between 0 and 1 that corresponds to the amount of predictions that match the true labels.
-
-### Section 2: Baseline Models (20 points)
-
-In the following functions, you will implement 3 baseline models. Recall that baseline models are used to benchmark our own machine learning models against.
-
-1. The first baseline model `all_complex` classifies ALL words as complex (think back to the coin-flipping example from class).
-2. The second baseline model `word_length_threshold` uses word length thresholding: if a word is longer than the given threshold, we consider it to be complex, and vice versa.
-3. The third baseline model `word_frequency_threshold` is similar to the second, but we will use frequencies from the Google N-Gram counts dataset as the metric to threshold against.
-
-**TODO:** Implement the three baseline models, and report their accuracies (using the function you implemented earlier).
-
-### Section 3: Machine Learning Models (20 points)
-
-For our machine learning classifiers, we will use the built-in Naive Bayes and Logistic Regression models from Sci-Kit Learn to train a classifier. Refer to the [Sci-Kit Learn Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html) for more information about the Sci-Kit Learn API. Feel free to experiment with other models for extra credit!
-
-For features, you'll want to use both word length and word frequency. However, feel free to use any other features that you want! Be sure to document any extra features in `REPORT.md`. Extra credit is available for the inclusion of any other interesting features!
-
-You can import the relevant models from Sci-Kit Learn using:
+Recall that you can access a column from a DataFrame with a dictionary-like notation:
 
 ```python
-from sklearn.naive_bayes import GaussianNB
+columns = df['column']
+query = df[df['column'] == True]
+# >>> returns a dataframe where the inner query is satisfied
 ```
 
-for Naive Bayes and
+### Section 1: Scavenger Hunt
+
+In this scavenger hunt, you will be using Pandas to determine the answers to the following questions about the provided [Wine Dataset]():
+
+0. What are the dimensions of the dataframe? That is, how many rows and columns are there?
+Give your answer as a `(rows, columns)` tuple.
+
+1. What is the average `alcohol` content over all wines?
+
+2. What is the standard deviation of the `magnesium` content?
+
+3. What is the mean alcohol content, grouped by `target`?
+Give your answer in terms of a list (e.g. `[class_0_alc, class_1_alc, class_2_alc]`).
+
+4. What is the minimum `proline` content? What is the maximum? Give your answer
+as a list in the form `[min, max]`.
+
+5. How many wine samples in the dataset have a `malic_acid` content over 2.5?
+
+6. What is the index of the wine with the lowest `flavanoid` content?
+
+7. How many unique `hue` values are there in the dataset?
+
+**TODO:** Implement the `scavenger_hunt()` function by returning a dictionary mapping the question number (as an integer) to the correct answers.
+
+*Hint*: You can read the file into a `DataFrame` by using:
 
 ```python
-from sklearn.linear_model import LogisticRegression
+df = pd.read_csv('wine.csv')
 ```
 
-for Logistic Regression. To train a classifier, you need two numpy arrays:
+Methods that might be useful are: `mean()`, `std()`, `size()`, `groupby()`, `sort_values()`, `idxmin()`, and `unique()`. Feel free to use outside resources to figure out creative ways of answering these questions. The [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/) will definitely be helpful.
 
-1. `X_train`: size (`m` x `n`), where `m` is the number of words and `n` is the number of features for each word.
-2. `Y_train`: size (`m` x `1`) for the labels of each of the `m` words.
+## Part 2: Generating Text With N-Gram Language Models
 
-Since Sci-Kit Learn classifiers take in `numpy` arrays, always wrap your lists in a `np.array`:
+### Section 0: What is a language model?
+
+In this assignment, we will be building a **language model**, which is how we can machine learning to generate text (e.g. chatbots, summarization, translation). In particular, we will be training an **n-gram** model, which is a relatively simple but extremely powerful model. Next week, we'll work with the state-of-the-art in NLP, which includes neural networks!
+
+In short, an n-gram language model works by treating language as a sequence of *overlapping* word tuples, of size $n$. For example, the sentence "I love CIS 192" would be represented as unigrams ($n = 1$) as:
 
 ```python
-my_array = np.array([1, 2, 3, 4, 5])
+[("I"), ("love"), ("CIS"), ("192")]
 ```
 
-As such, you'll want to import `numpy` using:
+and as bigrams ($n = 2$) as:
 
 ```python
-import numpy as np
+[("I", "love"), ("love", "CIS"), ("CIS", "192")]
 ```
 
-**TODO:** Implement `logistic_regression` and `naive_bayes`, where you will train the machine learning models and report their accuracies on the testing data.
+Language models work by estimating the **probability of the next word** in sequence given the previous words, and sampling from that distribution. If you're familiar with the **Markov Property**, we will be relying on it as a powerful assumption to make the generation process simpler. Powerful language models (such as [GPT-3](https://www.technologyreview.com/2020/07/20/1005454/openai-machine-learning-language-generator-gpt-3-nlp/) and the human brain) should include all the history in a sentence. However, for this assignment, we will just be considering a single n-gram of history to make the math simpler.
 
-### Section 4: Report (5 points)
+At a high level, in this assignment, we will build an estimator for the probability of a given word (or n-gram), given a context (n-gram), and then a way to repeatedly select new words until we have a full body of text.
 
-**TODO:** Complete `REPORT.md` with information about your implementations and your accuracies for each section. Write a few comments comparing the performace of your Naive Bayes classifier and your Logistic Regression classifier. Include any details about extra credit you've completed.
+We've provided some stubs to make the implementation process more clear. Feel free to add helper functions, but as usual, don't change the type signatures of the functions! You can get an idea of how the functions should work together by checking out the code under `if __name__ == "__main__"`.
 
-Be sure to complete the report in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format. Remember to indicate which member worked on which sections for full credit.
+### Section 1: Reading Data
 
-## Submission
+The first thing you want to do is load the data from a given text file into memory. We'll start by just getting a list of the words, and chunking them into grams later. Use the `corpus.txt` file ([available here]()) as a example corpus to use.
 
-Submit all your code and potentially extra data to Gradescope. If you have a partner, YOU MUST MARK THEM AS A COLLABORATOR ON GRADESCOPE. If you fail to do this, you may get a 0 on this assignment.
+**TODO:** Implement the `get_words()` function, that takes in the file path of a plain-text `.txt` as a string. The function should return a list of words (as strings), in the order that they appear in the text file. 
 
-## Attributions
+*Hint:* make use of the `split()` function.
 
-<small> This homework was adapted from [CIS 530: Computational Linguistics at the University of Pennsylvania](https://computational-linguistics-class.org/) by Arun Kirubarajan and Kevin Sun.</small>
+### Section 2: Transforming Data
+
+Getting data into a useable format is often most important part of the machine learning process. For an n-gram model, this means taking our list of words and creating our list of n-grams, provided the value for $n$.
+
+**TODO:** Implement `get_ngrams()`, which takes a list of words and the size of the grams and returns a **list of tuples**, where each tuple is a gram.
+
+### Section 3: Computing the Distribution of Words
+
+The most important part of the n-gram model is our estimate of the distribution of our words. That is, we want to map a particular context n-gram to possible next n-grams and their frequencies. We'll represent this distribution by using a double dictionary, where the key of the outer dictionary is the context n-gram, and the inner dictionary maps the target n-gram to its frequency.
+
+For example, many our `counts` dictionary looks something like:
+
+```python
+counts = get_counts(n_grams)
+print(counts[('I', 'am')])
+
+>>> {('very', 'cool'): 50, ('kinda', 'lame'): 20, ('already', 'asleep'): 10 ... }
+```
+
+We also want to make sure that our model *generalizes* a bit better than just the raw frequencies. So we'll also add 1 to each possible frequency so that our model has a bit more creativity. If you're interested, this is called [smoothing](https://en.wikipedia.org/wiki/Language_model#n-gram).
+
+*Hint:* We can do this by initializing a default dictionary, which maps to a default dictionary with the default integer value of 1: 
+
+```python
+counts = defaultdict(lambda: defaultdict(lambda: 1))
+```
+
+**TODO:** Implement the `get_counts()` function, which takes in the list of n-grams and returns the frequency distribution of the n-grams.
+
+### Section 4: Generating Words By Sampling
+
+Now, it's time for the moment of truth: using our distribution of frequencies to select the next word given some context. 
+
+One way to randomly select a next word would be to select a random number between 1 and `len(n_grams)`, and select that n-gram. However, that totally disregards our actual empirical estimate of the frequencies (i.e. in `get_counts`). A better way would be to randomly select a word in accordance with the distribution we computed earlier.
+
+We can do this by using `np.random.choice`, where we provide the length of a list to sample from and a list of corresponding **probabilities**, which will return the index of the selection:
+
+```python
+word = words[np.random.choice(len(words), p=probabilities)]
+```
+
+**TODO:** Implement the `generate_gram()` function, which takes in the distribution `counts` as well as the context n-gram, and returns a selected n-gram tuple according to the distribution for the given context.
+
+*Hint:* Make sure you understand which dictionary in `counts` to use as the distribution. You also will need to normalize the raw frequencies into probabilities for `np.random.choice` by dividing each entry by the sum of the frequencies in the distribution.
+
+There's a lot more nuance to generating text than just random sampling, but these suffices for now. If you want to learn more about how to generate text, check out [this blog post I wrote](https://kirubarajan.com/blog/decoding) on the subject.
+
+### Section 5: Generating Entire Sentences
+
+For the final part, we will put everything together. In order to generate an entire sentence or paragraph, we can repeatedly call `generate_gram()`, feeding in the previous prediction as the next context. This is known as **auto-regressive** generation.
+
+**TODO:** Implement the `generate_sentence` function, which takes in the distribution `counts` as well as a context n-gram (and an optional parameter for the number of n-grams to generate) and should return a list of tuples.
+
+*Hint:* We've provided a `stringify()` helper function to help you visualize what your generated sentence looks like in regular string format. Feel free to use it to help appreciate your work!
+
+### Extra Credit: Build Your Own Corpus
+
+The corpus provided consists of presidential speeches from Barack Obama, which can be a little dry. For extra credit, create your own corpus of text, and be creative with it! It can be things like Wikipedia, blog posts, tweets, fan-fiction, or your friend's literary assignments!
+
+Include the corpus along with a sample generation in your Gradescope submission.
+
+## Conclusion
+
+Machine learning is a very interesting, but often confusing subject. In this course, unfortunately, we can't provide all the details and depth, but this assignment should serve as a springboard for all sorts of things related to data science. The final project will be a great opportunity to explore some of these ideas in greater depth.
+
+In the next few assignments and lectures, we'll be introducing modern approaches to this very problem of text generation, such as word embeddings and neural networks!

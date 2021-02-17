@@ -24,7 +24,7 @@ query = df[df['column'] == True]
 
 ### Section 1: Scavenger Hunt
 
-In this scavenger hunt, you will be using Pandas to determine the answers to the following questions about the provided [Wine Dataset]():
+In this scavenger hunt, you will be using Pandas to determine the answers to the following questions about the provided [Wine Dataset](https://raw.githubusercontent.com/CIS192/homework/master/assignment2/wine.csv):
 
 0. What are the dimensions of the dataframe? That is, how many rows and columns are there?
 Give your answer as a `(rows, columns)` tuple.
@@ -81,7 +81,7 @@ We've provided some stubs to make the implementation process more clear. Feel fr
 
 ### Section 1: Reading Data
 
-The first thing you want to do is load the data from a given text file into memory. We'll start by just getting a list of the words, and chunking them into grams later. Use the `corpus.txt` file ([available here]()) as a example corpus to use.
+The first thing you want to do is load the data from a given text file into memory. We'll start by just getting a list of the words, and chunking them into grams later. Use the `corpus.txt` file ([available here](https://raw.githubusercontent.com/CIS192/homework/master/assignment2/corpus.txt)) as a example corpus to use.
 
 **TODO:** Implement the `get_words()` function, that takes in the file path of a plain-text `.txt` as a string. The function should return a list of words (as strings), in the order that they appear in the text file. 
 

@@ -122,7 +122,7 @@ Now, it's time for the moment of truth: using our distribution of frequencies to
 
 One way to randomly select a next word would be to select a random number between 1 and `len(n_grams)`, and select that n-gram. However, that totally disregards our actual empirical estimate of the frequencies (i.e. in `get_counts`). A better way would be to randomly select a word in accordance with the distribution we computed earlier.
 
-We can do this by using `np.random.choice`, where we provide the length of a list to sample from and a list of corresponding **probabilities**, which will return the index of the selection:
+We can do this with [NumPy](https://numpy.org/) by using `np.random.choice`, where we provide the length of a list to sample from and a list of corresponding **probabilities**, which will return the index of the selection:
 
 ```python
 word = words[np.random.choice(len(words), p=probabilities)]

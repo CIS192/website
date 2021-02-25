@@ -103,7 +103,7 @@ For example, many our `counts` dictionary looks something like:
 counts = get_counts(n_grams)
 print(counts[('I', 'am')])
 
->>> {('very', 'cool'): 50, ('kinda', 'lame'): 20, ('already', 'asleep'): 10 ... }
+>>> {('am', 'cool'): 50, ('am', 'lame'): 20, ('am', 'asleep'): 10 ... }
 ```
 
 We also want to make sure that our model *generalizes* a bit better than just the raw frequencies. So we'll also add 1 to each possible frequency so that our model has a bit more creativity. If you're interested, this is called [smoothing](https://en.wikipedia.org/wiki/Language_model#n-gram).

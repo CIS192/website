@@ -83,9 +83,9 @@ We've provided some stubs to make the implementation process more clear. Feel fr
 
 The first thing you want to do is load the data from a given text file into memory. We'll start by just getting a list of the words, and chunking them into grams later. Use the `corpus.txt` file ([available here](https://raw.githubusercontent.com/CIS192/homework/master/assignment2/corpus.txt)) as a example corpus to use.
 
-**TODO:** Implement the `get_words()` function, that takes in the file path of a plain-text `.txt` as a string. The function should return a list of words (as strings), in the order that they appear in the text file. 
+**TODO:** Implement the `get_words()` function, that takes in the file path of a plain-text `.txt` as a string. The function should return a list of lowercase words (as strings), in the order that they appear in the text file.
 
-*Hint:* make use of the `split()` function.
+*Hint:* make use of the `split()` function and `lower()`.
 
 ### Section 2: Transforming Data
 

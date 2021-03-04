@@ -2,25 +2,23 @@
 path: /assignments/3
 ---
 
-# Assignment 3: Learning Machine Learning
+# Assignment 3: Deeper Learning
 
-> Due November 10th at 11:59 PM EST.
+> Due March 17th at 11:59 PM EST.
 
 ## Preface
 
-In this assignment, we will be taking a deep dive into machine learning. This is NOT a machine learning class, so very little math is expected in this assignment, however thinking about the questions mathematically and exercising proper debugging will help.
+In this assignment, we will be exploring deep learning. This is NOT a machine learning class, so very little math is expected in this assignment, however thinking about the questions mathematically and exercising proper debugging will help.
 
-This assignment can be completed in an IPython notebook. The starting code is available in a notebook <a href="https://raw.githubusercontent.com/CIS192/homework/master/assignment3.ipynb" download>to download here</a> (you might need to right-click and "Save As"). Feel free to use Google Colab or your own machine. Be warned that the second part of this assignment involves neural network training, which is computationally expensive and may take a long time on a laptop.
+This assignment can be completed in an IPython notebook. The starting code is available in a notebook <a href="https://raw.githubusercontent.com/CIS192/homework/master/assignment3.ipynb" download>to download here</a> (you might need to right-click and "Save As"). Feel free to use Google Colab or an editor on your own machine. Be warned that part of this assignment involves neural network training, which is computationally expensive and may take a long time on a laptop.
 
-This assignment will be graded by the staff, so make sure to comment your code and document design considerations. You are allowed to use external libraries if you wish (e.g. `math` or `numpy`) but obviously implementations must be done yourself without importing from libraries like Sci-Kit Learn.
+This assignment will be graded by the staff, so make sure to comment your code and document design considerations. You are allowed to use external libraries if you wish (e.g. `math` or `numpy`).
 
 ## Deep Learning Training
 
-In this section, we will be optimizing the parameters for neural network training, specifically for an image classification task. Note: if you are using Google Colab make sure to change the **Runtime Type to GPU** to speed up your training time!
+In this section, we will be optimizing the parameters for neural network training, specifically for an image classification task. Note: if you are using Google Colab make sure to change the **Runtime Type to GPU** to speed up training!
 
-**TODO:** Try out **at least three different parameter alterations** and note each final accuracy. In addition, write a sentence or two describing what your high-level intuition is for explaining the performance difference (if any). We’re not looking for any particular accuracy, just an exploration of different hyperparameter tunings which lead to some change in performance.
-
-For some inspiration, consider changing these hyperparameters:
+These are some common hyperparameters to experiment with when training neural networks:
 
 1. `batch_size` – smaller batch size = more parameter updates
 2. `Dropout(p)` – randomly sets weights to 0 with probability `p` to prevent overfitting
@@ -28,7 +26,9 @@ For some inspiration, consider changing these hyperparameters:
 4. `lr` – larger learning rate = larger step per instance, less granularity
 5. `epochs` – more training batches/passes through the data
 
-There is a lot of nomenclature involved, so you should consult the [Keras documentation](https://keras.io/api/) or other external resources and ask questions on Piazza. Feel free to make architecture changes (e.g. `model.add()` new layers) if you’re feeling adventurous! However, just changing the hyperparameters (with explanation) is sufficient for full credit.
+**TODO:** Try out **at least three different parameter alterations** and note each final accuracy. To recieve full credit, you must change 3 different hyperparameters (e.g. batch size, learning rate, and epochs), and it may be informative to change a hyperparameter multiple times. In addition, write a sentence or two describing what your high-level intuition is for explaining the performance difference (if any). If you're coding in the notebook environment, feel free to write your explanation in a text cell. We’re not looking for any particular accuracy, we just want an exploration of different hyperparameter tunings and observations of the change in performance.
+
+There is a lot of jargon involved, so you should consult the [Keras documentation](https://keras.io/api/) or other external resources and ask questions on Piazza. Feel free to make architecture changes (e.g. `model.add()` new layers) if you’re feeling adventurous! However, just changing three hyperparameters (with explanation) is sufficient for full credit.
 
 ```python
 '''
@@ -113,7 +113,7 @@ We can now instantiate a query-able Magnitude vectors object as follows:
 from pymagnitude import *
 
 file_path = "GoogleNews-vectors-negative300.magnitude"
-vectors = Magnitude(file_path)
+vectors = Magnitude(filge_path)
 print(vectors.distance("cat", "dog"))
 ```
 

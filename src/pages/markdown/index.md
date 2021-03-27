@@ -3,7 +3,8 @@ path: /markdown
 ---
 
 # Assignment 4: Bringing Tumblr Back
-> Due December 1st at 11:59 PM. Start early and make use of office hours!
+
+> Due March 31st at 11:59 PM. Start early and make use of office hours!
 
 ## Preface
 In this assignment, we will be building a blog using Django. The blog will support markdown formatting, as well as SQL database support. As we found out in class, this is actually not too difficult! Refer to and recreate the code given in lecture today as it will help tremendously for this assignment - not only as a boilerplate but also to gain understanding as to how Django works.

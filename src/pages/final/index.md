@@ -4,6 +4,8 @@ path: /final
 
 # Final Project
 
+> Due May 3rd at 11:59 PM (Last day of reading days)
+
 ## Description
 
 The moment you have been waiting for: the final project. Create whatever you want to build; I hope by now you can see that you can do anything in Python! You are allowed to work with a partner and the project must be roughly be of a similar scale to one of the homework assignments. We encourage you to build something you can show off! Feel free to discuss project ideas with the instructor or TAs at office hours.

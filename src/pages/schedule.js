@@ -55,41 +55,46 @@ const lectures = [
   {
     week: 7,
     date: '3/10',
-    topics: 'REST APIs with Flask',
-    notes: '/flask',
+    topics: 'Spring Break'
   },
   {
     week: 8,
     date: '3/17',
-    topics: 'Full Stack Development with Django',
-    notes: '/django1',
+    topics: 'REST APIs with Flask',
+    notes: '/flask',
     hw: 'HW4',
     hw_link: '/markdown'
   },
   {
     week: 9,
     date: '3/24',
+    topics: 'Full Stack Development with Django',
+    notes: '/django1',
+  },
+  {
+    week: 10,
+    date: '3/31',
     topics: 'Relational Databases and Security',
     notes: '/django2',
     hw: 'HW5',
     hw_link: '/twitter'
   },
   {
-    week: 10,
-    date: '3/31',
+    week: 11,
+    date: '4/07',
     topics: 'Cloud Computing with Docker',
     notes: '/docker',
   },
   {
-    week: 11,
-    date: '4/07',
+    week: 12,
+    date: '4/14',
     topics: 'Lightning Lectures [TBD]',
     notes: '/lightning',
     hw: 'Final Project',
     hw_link: '/final'
   },
   {
-    week: 12,
+    week: 13,
     date: '4/21',
     topics: 'Course Wrap-Up',
     notes: '/final',

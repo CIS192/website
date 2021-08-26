@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 const lectures = [
   {
     week: 0,
-    date: '1/20',
+    date: '9/7',
     topics: 'Python Basics',
     notes: '/basics',
     hw: 'HW0',
@@ -12,13 +12,13 @@ const lectures = [
   },
   {
     week: 1,
-    date: '1/27',
+    date: '9/14',
     topics: 'Data Structures and Algorithms',
     notes: '/data_structures',
   },
   {
     week: 2,
-    date: '2/03',
+    date: '9/21',
     topics: 'Pythonic Programming',
     notes: '/pythonic',
     hw: 'HW1',
@@ -26,13 +26,13 @@ const lectures = [
   },
   {
     week: 3,
-    date: '2/10',
+    date: '9/28',
     topics: 'Exceptions, Modules and Files',
     notes: '/modules',
   },
   {
     week: 4,
-    date: '2/17',
+    date: '10/5',
     topics: 'Machine Learning with NumPy and Sci-Kit Learn',
     notes: '/ml',
     hw: 'HW2',
@@ -40,13 +40,13 @@ const lectures = [
   },
   {
     week: 5,
-    date: '2/24',
-    topics: 'Natural Language Processing with NLTK',
+    date: '10/12',
+    topics: 'Natural Language Processing with SpaCy',
     notes: '/nlp',
   },
   {
     week: 6,
-    date: '3/03',
+    date: '10/19',
     topics: 'Deep Learning with Keras/Tensorflow',
     notes: '/deep',
     hw: 'HW3',
@@ -54,50 +54,45 @@ const lectures = [
   },
   {
     week: 7,
-    date: '3/10',
-    topics: 'Spring Break'
+    date: '10/26',
+    topics: 'REST APIs with Flask',
+    notes: '/flask',
   },
   {
     week: 8,
-    date: '3/17',
-    topics: 'REST APIs with Flask',
-    notes: '/flask',
+    date: '11/2',
+    topics: 'Full Stack Development with Django',
+    notes: '/django1',
     hw: 'HW4',
     hw_link: '/markdown'
   },
   {
     week: 9,
-    date: '3/24',
-    topics: 'Full Stack Development with Django',
-    notes: '/django1',
+    date: '11/9',
+    topics: 'Relational Databases and Security',
+    notes: '/django2',
   },
   {
     week: 10,
-    date: '3/31',
-    topics: 'Relational Databases and Security',
-    notes: '/django2',
+    date: '11/16',
+    topics: 'Cloud Computing with Docker',
+    notes: '/docker',
     hw: 'HW5',
     hw_link: '/twitter'
   },
   {
     week: 11,
-    date: '4/07',
-    topics: 'Cloud Computing with Docker',
-    notes: '/docker',
+    date: '11/23',
+    topics: 'Lightning Lectures [TBD]',
+    notes: '/lightning',
   },
   {
     week: 12,
-    date: '4/14',
-    topics: 'Lightning Lectures [TBD]',
-    notes: '/lightning',
-    hw: 'Final Project',
-    hw_link: '/final'
-  },
-  {
-    week: 13,
-    date: '4/21',
+    date: '11/30',
     topics: 'Course Wrap-Up',
     notes: '/final',
+    hw: 'Final Project',
+    hw_link: '/final'
   },
 ];
 

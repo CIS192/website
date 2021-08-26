@@ -15,14 +15,14 @@ const Index = () => {
                 🐍
               </span>
             </h1>
-            <h1 className="subtitle">Spring 2021</h1>
+            <h1 className="subtitle">Fall 2021</h1>
             <p>
               <strong>Instructor: </strong>{' '}
               <a href="https://kirubarajan.github.io">Arun Kirubarajan</a>{' '}
               (Section 201)
             </p>
             <p>
-              <strong>Location: </strong> Remote!
+              <strong>Location: </strong> Towne 319 (5:15 to 6:45 PM)
             </p>{' '}
             <br />
             <p>

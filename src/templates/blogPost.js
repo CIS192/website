@@ -32,7 +32,7 @@ const Template = ({ data }) => {
                 And that's all, folks! <br /> <br /> These notes were written by
                 Arun Kirubarajan. All rights reserved.{' '}
               </p>
-              <a href="/lectures">
+              <a href="/schedule">
                 <span class="tag is-link is-light is-medium">All Material</span>
               </a>
             </div>

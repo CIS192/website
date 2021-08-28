@@ -4,7 +4,7 @@ path: /final
 
 # Final Project
 
-> Due May 3rd at 11:59 PM (Last day of reading days)
+> Due May 3rd at 11:59 PM
 
 ## Description
 

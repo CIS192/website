@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 const lectures = [
   {
     week: 0,
-    date: '9/7',
+    date: '9/1',
     topics: 'Python Basics',
     notes: '/basics',
     hw: 'HW0',
@@ -12,13 +12,13 @@ const lectures = [
   },
   {
     week: 1,
-    date: '9/14',
+    date: '9/7',
     topics: 'Data Structures and Algorithms',
     notes: '/data_structures',
   },
   {
     week: 2,
-    date: '9/21',
+    date: '9/14',
     topics: 'Pythonic Programming',
     notes: '/pythonic',
     hw: 'HW1',
@@ -26,13 +26,13 @@ const lectures = [
   },
   {
     week: 3,
-    date: '9/28',
+    date: '9/21',
     topics: 'Exceptions, Modules and Files',
     notes: '/modules',
   },
   {
     week: 4,
-    date: '10/5',
+    date: '9/28',
     topics: 'Machine Learning with NumPy and Sci-Kit Learn',
     notes: '/ml',
     hw: 'HW2',
@@ -40,13 +40,13 @@ const lectures = [
   },
   {
     week: 5,
-    date: '10/12',
+    date: '10/5',
     topics: 'Natural Language Processing with SpaCy',
     notes: '/nlp',
   },
   {
     week: 6,
-    date: '10/19',
+    date: '10/12',
     topics: 'Deep Learning with Keras/Tensorflow',
     notes: '/deep',
     hw: 'HW3',
@@ -54,13 +54,13 @@ const lectures = [
   },
   {
     week: 7,
-    date: '10/26',
+    date: '10/19',
     topics: 'REST APIs with Flask',
     notes: '/flask',
   },
   {
     week: 8,
-    date: '11/2',
+    date: '10/26',
     topics: 'Full Stack Development with Django',
     notes: '/django1',
     hw: 'HW4',
@@ -68,13 +68,13 @@ const lectures = [
   },
   {
     week: 9,
-    date: '11/9',
+    date: '11/2',
     topics: 'Relational Databases and Security',
     notes: '/django2',
   },
   {
     week: 10,
-    date: '11/16',
+    date: '11/9',
     topics: 'Cloud Computing with Docker',
     notes: '/docker',
     hw: 'HW5',
@@ -82,13 +82,13 @@ const lectures = [
   },
   {
     week: 11,
-    date: '11/23',
+    date: '11/16',
     topics: 'Lightning Lectures [TBD]',
     notes: '/lightning',
   },
   {
     week: 12,
-    date: '11/30',
+    date: '11/23',
     topics: 'Course Wrap-Up',
     notes: '/final',
     hw: 'Final Project',

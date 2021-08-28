@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 const lectures = [
   {
     week: 0,
-    date: '9/1',
+    date: '08/31',
     topics: 'Python Basics',
     notes: '/basics',
     hw: 'HW0',

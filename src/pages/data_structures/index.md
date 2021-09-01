@@ -40,7 +40,7 @@ students.remove("Arun")
 
 ### Existence
 
-Checking if an element exists is one of my favourite pieces of syntactic sugar from Python - we simply write the boolean expression pretty much in English using the [`in`](https://docs.python.org/3/reference/expressions.html#in) keyword:
+Checking if an element exists is one of the tidiest pieces of syntactic sugar from Python - we simply write the boolean expression pretty much in English using the [`in`](https://docs.python.org/3/reference/expressions.html#in) keyword:
 
 ```python
 if "Arun" in students:

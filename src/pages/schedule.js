@@ -33,7 +33,7 @@ const lectures = [
   {
     week: 4,
     date: '9/28',
-    topics: 'Machine Learning with NumPy and Sci-Kit Learn',
+    topics: 'Machine Learning and Data Science with NumPy, Pandas, and Sci-Kit Learn',
     notes: '/ml',
     hw: 'HW2',
     hw_link: '/assignments/2'
@@ -98,25 +98,21 @@ const lectures = [
 
 const guides = [
   {
-    topics: 'Useful Python Resources',
-    'notes': '/useful'
+    topics: 'Installing Python',
+    notes: '/install',
+  },
+  {
+    topics: 'Development Environment',
+    notes: '/environment'    
   },
   {
     topics: 'Unix Commands',
     notes: '/unix',
   },
   {
-    topics: 'Installing Python',
-    notes: '/install',
-  },
-  {
     topics: 'Git Reference',
     notes: '/git',
-  },
-  {
-    topics: 'Virtual Environments',
-    notes: '/virtualenv',
-  },
+  }
 ];
 
 const Teaching = () => {

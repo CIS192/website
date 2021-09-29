@@ -8,117 +8,65 @@ In lecture, we talked about how **Machine Learning** just boils down to making p
 
 Slides from lecture are available [here](https://kirubarajan.nyc3.digitaloceanspaces.com/spring2020/Machine%20Learning%20I.pdf).
 
+## About Pandas and Sci-Kit Learn
+
+Recall from lecture that Pandas is a library that gives us a framework for loading and manipulating data. Data is stored in a spreadsheet-like format of a `DataFrame`, which we can initialize from a `.csv` file (along with a list of dictionaries or by inserting rows into programatically). In addition to Pandas, we will also make use of .
+
 ## Analyzing Cereal
 
 In lecture, we took a look at the [Cereal Dataset](https://www.kaggle.com/crawford/80-cereals) from Kaggle.
 
 ### Working With Files
 
-We used the following script to load the `"cereal.csv"` file:
+We used the following script to read in the `"cereal.csv"` file with Pandas:
 
 ```python
-import pickle
-
-def get_points(file_path):
-    with open(file_path) as dataset:
-        points = dict()
-
-        for line in dataset.readlines()[1:]:
-            fields = line.split(",")
-            name, calories, sugar, rating = fields[0], float(fields[3]), float(fields[9]), float(fields[-1].strip())
-            points[name] = calories, sugar, rating
-
-    return points
-
-def save_points(points, file_path):
-    with open(file_path, "wb") as points_file:
-        pickle.dump(points, points_file)
-
-def load_points(file_path):
-    with open(file_path, "rb") as points_file:
-        points = pickle.load(points_file)
-        return points
-
-points = get_points("cereal.csv")
-save_points(points, "dataset.something")
-print(load_points("dataset.something"))
-```
-
-This script opens the UTF-8 encoded `.csv` file, and reads in the relevant fields of `name`, `sugar`, `calories`, and `rating` before returning a dictionary of the different data points.
-
-The `save_points` and `load_points` functions allow us to _serialize_ a Python object into a file that is stored locally using the first-party `pickle` package. This is convinient, since we don't need to re-parse the file, and instead it is directly loaded into Python's "memory".
-
-### Visualizing Data
-
-In this script, we `import`-ed our previous `get_points` function from the other module, and we used a third-party library named `matplotlib` to plot the points graphically:
-
-```python
-from data import get_points
+import pandas as pd
 import matplotlib.pyplot as plt
 
-points = get_points("cereal.csv").items()
-fig, ax = plt.subplots()
 
-# calories
-x = [info[1] for name, info in points]
-# rating
-y = [info[2] for name, info in points]
+def get_cereal_df(input_path):
+    return pd.read_csv(input_path)
 
-ax.scatter(x, y)
 
-# annotating with name
-for i, (name, info) in enumerate(points):
-    ax.annotate(name[:5], (x[i], y[i]))
+def visualize_data(df):
+    plt.scatter(df['calories'], df['sugars'])
+    plt.show()
 
-plt.show()
+
+if __name__ == '__main__':
+    df = get_cereal_df('cereal.csv')
+    visualize_data(df)
 ```
 
-The script plots either calories or sugar on the x-axis and the cereal's rating on the y-axis. We also annotate each point with the cereal's name to make our graph more interpretable.
+Note that the code under the `if` statement is only run when we execute the script via the command line (i.e. `python3 data.py`). This is to ensure that we can later import functionality from this module without running all the code in the script.
 
 ### Training a Machine Learning Model
 
 Finally, we trained a machine learning model named `KNeighborsRegressor` to predict the rating of a cereal, given it's sugar and calories as **features**. The model is a variant of the K-Nearest Neighbours classifier discussed in class. However, the model performs a _regression_ task of predicting a continuous value, rather than a discrete one.
 
-We first `import` the data points, partition the data into a training and testing splits, and then train the classifier:
+We first `import` the data points via `get_cereal_df`, partition the data into a training and testing splits, and then train the classifier:
 
 ```python
 from sklearn.neighbors import KNeighborsRegressor
-from data import get_points
-import numpy as np
+from sklearn.model_selection import train_test_split
+from data import get_cereal_df
 
-# getting data
-data = list(get_points("cereal.csv").items())
-split = (len(data) // 10) * 8
 
-# splitting data
-training, test = data[:split], data[split:]
+if __name__ == '__main__':
+    df = get_cereal_df('cereal.csv')
 
-# formatting train data
-training_data = np.array([(features[0], features[1]) for name, features in training]).astype(np.float64)
-training_labels = np.array([features[2] for name, features in training]).astype(np.float64)
+    train_features, test_features = train_test_split(df[['sugars', 'calories']], test_size=0.2)
+    train_labels, test_labels = train_test_split(df[['calories']], test_size=0.2)
 
-# formatting test data
-test_data = np.array([(features[0], features[1]) for name, features in training]).astype(np.float64)
-test_labels = np.array([features[2] for name, features in training])
+    model = KNeighborsRegressor(n_neighbors=9)
+    model.fit(train_features, train_labels) # ---> does the training!
 
-# making predictions
-knn = KNeighborsRegressor(n_neighbors=3)
-knn.fit(training_data, training_labels)
-
-# scoring predictions
-print(knn.predict(test_data[:3]))
-print(knn.score(test_data, test_labels))
+    print(model.score(test_features, test_labels))
 ```
 
-Our final two lines print some example predictions, followed by the model's evaluation score.
+Our final line prints the model's evaluation score, which you can read about [here](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html#sklearn.neighbors.KNeighborsRegressor.score).
 
 ## Conclusion
 
 There are many different third-party tools and frameworks that make machine learning easy in Python. We discussed in class how they use [Cython](https://cython.org/) to speed up the performance of the code, and this will become more apparent in the following week's lectures, when we look into Natural Language Processing and Deep Learning!
-
-## References
-
-1. Pickling (Official)
-2. Read/Writing to Files (Official)
-3. Sci-Kit Learn
-4. Matplotlib

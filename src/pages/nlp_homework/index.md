@@ -4,7 +4,7 @@ path: '/assignments/2'
 
 # Assignment 2: Learning Machine Learning
 
-In this assignment, we will be exploring data science, and building our first machine learning model from scratch! Make sure to install dependencies with `pip install numpy pandas` as we'll be using them for the assignment. In addition, make sure to keep your data files in the same directory as your `assignment2.py` ([available here](https://raw.githubusercontent.com/CIS192/homework/master/assignment2/assignment2.py)) to keep things simple.
+In this assignment, we will be exploring data science, and building our first machine learning model from scratch! Make sure to install dependencies with `pip install numpy pandas` as we'll be using them for the assignment. Try to explore other dependency managers such as [Pipenv](https://pipenv.pypa.io/en/latest/) and [Poetry](https://python-poetry.org/) as well! In addition, make sure to keep your data files in the same directory as your `assignment2.py` ([available here](https://raw.githubusercontent.com/CIS192/homework/master/assignment2/assignment2.py)) to keep things simple.
 
 ## Part 1: Data Wrangling with Pandas
 
@@ -116,6 +116,8 @@ counts = defaultdict(lambda: defaultdict(lambda: 1))
 
 **TODO:** Implement the `get_counts()` function, which takes in the list of n-grams and returns the frequency distribution of the n-grams.
 
+*Hint:* The `defaultdict` with a bunch of `lambda` functions may be hard to interpret when `print`-ing. I would recommended casting the `defaultdict` to a regular `dict` to make this cleaner and easier to read.
+
 ### Section 4: Generating Words By Sampling
 
 Now, it's time for the moment of truth: using our distribution of frequencies to select the next word given some context. 
@@ -132,7 +134,7 @@ word = words[np.random.choice(len(words), p=probabilities)]
 
 *Hint:* Make sure you understand which dictionary in `counts` to use as the distribution. You also will need to normalize the raw frequencies into probabilities for `np.random.choice` by dividing each entry by the sum of the frequencies in the distribution.
 
-There's a lot more nuance to generating text than just random sampling, but these suffices for now. If you want to learn more about how to generate text, check out [this blog post I wrote](https://kirubarajan.com/blog/decoding) on the subject.
+There's a lot more nuance to generating text than just random sampling, but these suffices for now. If you want to learn more about how to generate text, check out [this blog post I wrote](https://arun.ai/blog/decoding) on the subject.
 
 ### Section 5: Generating Entire Sentences
 
@@ -142,9 +144,9 @@ For the final part, we will put everything together. In order to generate an ent
 
 *Hint:* We've provided a `stringify()` helper function to help you visualize what your generated sentence looks like in regular string format. Feel free to use it to help appreciate your work!
 
-### Extra Credit: Build Your Own Corpus
+### Section 6: Build Your Own Corpus
 
-The corpus provided consists of presidential speeches from Barack Obama, which can be a little dry. For extra credit, create your own corpus of text, and be creative with it! It can be things like Wikipedia, blog posts, tweets, fan-fiction, or your friend's literary assignments!
+The corpus provided consists of presidential speeches from Barack Obama, which can be a little dry. In this section, create your own corpus of text, and be creative with it! It can be things like Wikipedia, blog posts, tweets, fan-fiction, or your friend's literary assignments!
 
 Include the corpus along with a sample generation in your Gradescope submission.
 

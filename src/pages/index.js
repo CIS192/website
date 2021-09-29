@@ -18,7 +18,7 @@ const Index = () => {
             <h1 className="subtitle">Fall 2021</h1>
             <p>
               <strong>Instructor: </strong>{' '}
-              <a href="https://kirubarajan.github.io">Arun Kirubarajan</a>{' '}
+              <a href="https://arun.ai">Arun Kirubarajan</a>{' '}
               (Section 201)
             </p>
             <p>

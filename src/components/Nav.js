@@ -15,15 +15,11 @@ const Nav = () => {
         </a>
         <a href="/schedule">
           {' '}
-          <span className="tag is-light"> Schedule </span>{' '}
+          <span className="tag is-light"> Lectures </span>{' '}
         </a>
         <a href="/assignments">
           {' '}
           <span className="tag is-light"> Assignments </span>{' '}
-        </a>
-        <a href="/staff">
-          {' '}
-          <span className="tag is-light"> Staff </span>{' '}
         </a>
       </nav>
       <br />

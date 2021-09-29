@@ -137,6 +137,10 @@ Something that's even more interesting about functions is the use of _positional
 
 ### Positional Arguments and Args
 
+The [language reference](https://docs.python.org/3.7/reference/compound_stmts.html#function-definitions) succinctly describes positional and keyword arguments as follows:
+
+> If the form *identifier is present, it is initialized to a tuple receiving any excess positional parameters, defaulting to the empty tuple. If the form **identifier is present, it is initialized to a new dictionary receiving any excess keyword arguments, defaulting to a new empty dictionary.
+
 Sometimes, we might choose to be less explicit with our function signatures. Specifically, we can use the single asterisk `*` before a function argument to allow for a variable amount of inputs. Let's refactor our `add_two` function into `def add(*args)`.
 
 In our function definition, the multiple parameters are represented as a list:

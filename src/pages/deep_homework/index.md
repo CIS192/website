@@ -4,8 +4,6 @@ path: /assignments/3
 
 # Assignment 3: Deeper Learning
 
-> Due March 17th at 11:59 PM EST.
-
 ## Preface
 
 In this assignment, we will be exploring deep learning. This is NOT a machine learning class, so very little math is expected in this assignment, however thinking about the questions mathematically and exercising proper debugging will help.

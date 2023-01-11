@@ -23,7 +23,7 @@
     "gatsby-remark-katex": "^3.1.17",
     "gatsby-remark-prismjs": "^3.3.23",
     "gatsby-source-filesystem": "^2.1.37",
-    "gatsby-transformer-remark": "^2.6.35",
+    "gatsby-transformer-remark": "^5.25.1",
     "katex": "^0.11.1",
     "node-sass": "^4.13.0",
     "prismjs": "^1.21.0",
